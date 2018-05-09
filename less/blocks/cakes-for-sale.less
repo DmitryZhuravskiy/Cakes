@@ -1,0 +1,165 @@
+.cakes-for-sale {
+	display: flex;
+	justify-content: column;
+	flex-wrap: wrap;
+	min-height: 310px;
+	padding-top: 110px;
+	z-index: 1;
+	position: relative;
+
+	.cakes-for-sale__fon {
+		order: 4;
+		position: absolute;
+		top: -190px;
+		right: 160px;
+		z-index: 1;
+	}
+
+	.cakes-for-sale__title {
+		font-family: "Playfair Display";
+		font-weight: bold;
+		font-size: 36px;
+		line-height: 40px;
+		text-align: center;
+		margin: 0 auto;
+		padding-bottom: 20px;
+		min-width: 120px;
+		z-index: 2;
+	}
+
+	.cakes-for-sale__sub-title {
+		font-size: 22px;
+		font-family: "Intro ScriptR H2 Base";
+		font-style: italic;
+		width: 100%;
+		text-align: center;
+		margin: 0 auto;
+	}
+	
+	.cakes-for-sale__btn {
+		order: 3;
+		margin: 40px auto;
+		display: inline-block;
+		padding-bottom: 20px;
+		height: 10px;
+	}
+
+	.cakes-for-sale__natural,
+	.cakes-for-sale__free  {
+		order: 1;
+		padding-left: 40px;
+		position: relative;
+		width: 100%;
+		padding-top: 25px;
+		font-family: "Circle";
+		font-size: 16px;
+
+		img {
+			position: absolute;
+			top: 40px;
+			left: 0;
+		}
+	}
+
+	.cakes-for-sale__free {
+		order: 2;
+		padding-left: 40px;
+	}
+
+	.cakes-for-sale__natural-free {
+		width: 100%;
+	}
+}
+
+@media @tablet-widths {
+
+	.cakes-for-sale {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		width: 480px;
+
+		.cakes-for-sale__title {
+			font-size: 55px;
+			line-height: 60px;
+			text-align: left;
+			margin: 0;
+			padding-bottom: 20px;
+			min-width: 280px;
+			z-index: 2;
+		}
+
+		.cakes-for-sale__sub-title {
+			font-size: 36px;
+			width: 100%;
+			text-align: left;
+			margin: 0;
+			padding-top: 25px;
+		}
+	
+		.cakes-for-sale__btn {
+			order: 1;
+			margin: 60px 0px;
+			display: inline-block;
+			padding-bottom: 20px;
+			height: 10px;
+			width: 200px;
+		}
+
+		.cakes-for-sale__natural-free {
+			order: 4;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-start;
+			width: 500px;
+		}
+
+		.cakes-for-sale__natural,
+		.cakes-for-sale__free {
+			width: 150px;
+			display: inline-block;
+			padding-left: 65px;
+			flex-shrink: 0;
+
+			img {
+				position: absolute;
+				top: 30px;
+				left: 0;
+				width: 55px;
+				height: 55px;
+			}
+		}
+
+		.cakes-for-sale__free {
+			flex-shrink: 1;
+		}
+
+		.cakes-for-sale__fon {
+			order: 4;
+			position: absolute;
+			top: 100px;
+			right: -420px;
+			z-index: 1;
+			width: 570px;
+			height: 571px;
+		}
+	}
+}
+
+@media @desktop-widths {
+
+	.cakes-for-sale {
+		width: 100%;
+
+		.cakes-for-sale__fon {
+			order: 4;
+			position: absolute;
+			top: 100px;
+			left: 540px;
+			z-index: 1;
+			width: 940px;
+			height: 941px;
+		}
+	}
+}

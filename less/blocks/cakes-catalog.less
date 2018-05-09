@@ -1,0 +1,220 @@
+.cakes-catalog {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	min-height: 790px;
+	max-width: 100%;
+	justify-content: space-around;
+	margin-top: 30px;
+
+	.cakes-catalog__title {
+		text-align: middle;
+		margin: 0 auto;
+		margin-bottom: 35px;
+		font-size: 20px;
+	}
+
+	.cakes-catalog__type {
+		display: block;
+		min-width: 280px;
+		max-width: 350px;
+		width: 100%;
+		min-height: 120px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+		margin-bottom: 10px;
+
+		span {
+			display: block;
+			margin: 10px 0 0 10px;
+			font-size: 12px;
+			height: 20px;
+			padding: 0;
+		}
+
+		p {
+			display: block;
+			margin-left: 10px;
+			margin-right: -20px;
+			font-size: 12px;
+			color: grey;
+			font-family: "Circle";
+			padding: 0;
+		}
+
+		a {
+			display: none;
+		}
+	}
+
+	.cake-classic {
+		background-image: url(../img/cake-classic--mobile.jpg);
+	}
+
+	.cake-mousse {
+		background-image: url(../img/cake-mousse--mobile.jpg);
+	}
+
+	.cake-wedding {
+		background-image: url(../img/cake-wedding--mobile.jpg);
+	}
+
+	.cake-male {
+		background-image: url(../img/cake-male--mobile.jpg);
+	}
+
+	.cake-woman {
+		background-image: url(../img/cake-woman--mobile.jpg);
+	}
+
+	.cake-child {
+		background-image: url(../img/cake-child--mobile.jpg);
+	}
+}
+
+@media @tablet-widths {
+
+	.cakes-catalog {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 0;
+
+		.cakes-catalog__title {
+			display: block;
+			font-size: 26px;
+			text-align: left;
+			margin-left: 20px;
+			width: 80%;
+		}
+
+		.cakes-catalog__type {
+			display: block;
+			width: 289px;
+			height: 185px;
+			margin: 20px; 
+
+			span {
+				padding: 20px 0 0 20px;
+			}
+
+			p {
+				padding-left: 20px;
+			}
+		}
+
+		.cake-classic,
+		.cake-child {
+			width: 420px;
+			height: 390px;
+			margin: 20px;
+		}
+
+		.cakes-catalog__wrapper {
+			margin-top: 30px;
+			margin-left: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			min-width: 289px;
+			min-height: 400px;
+		}
+
+		.cake-classic {
+			background-image: url(../img/cake-classic--tablet.jpg);
+		}
+
+		.cake-mousse {
+			background-image: url(../img/cake-mousse--tablet.jpg);
+			margin-top: -10px;
+		}
+
+		.cake-wedding {
+			background-image: url(../img/cake-wedding--tablet.jpg);
+		}
+
+		.cake-male {
+			background-image: url(../img/cake-male--tablet.jpg);
+			margin-left: 0;
+			margin-top: -10px;
+		}
+
+		.cake-woman {
+			background-image: url(../img/cake-woman--tablet.jpg);
+			margin-left: 0;
+		}
+
+		.cake-child {
+			background-image: url(../img/cake-child--tablet.jpg);
+		}
+	}
+}
+
+@media @desktop-widths {
+
+	.cakes-catalog {
+		width: 100%;
+		max-width: 1400px;
+
+		.cakes-catalog__title {
+			margin-left: 60px;
+		}
+
+		.cakes-catalog__type {
+			width: 485px;
+			height: 306px;
+			margin: 0;
+
+			span {
+				display: block;
+				margin: 0;
+				padding: 33px 0 0 33px;
+			}
+
+			p {
+				padding-left: 23px;
+			}
+		}
+
+		.cakes-catalog__wrapper,
+		.cake-classic,
+		.cake-child {
+			height: 655px;
+			margin: 60px;
+		}
+
+		.cake-classic,
+		.cake-child {
+			min-width: 694px;
+			width: 40%
+		}
+
+		.cake-classic {
+			background-image: url(../img/cake-classic--desktop.jpg);
+		}
+
+		.cake-mousse {
+			background-image: url(../img/cake-mousse--desktop.jpg);
+		}
+
+		.cake-wedding {
+			background-image: url(../img/cake-wedding--desktop.jpg);
+			margin-top: 260px;
+		}
+
+		.cake-male {
+			background-image: url(../img/cake-male--desktop.jpg);
+			margin-left: 0;
+		}
+
+		.cake-woman {
+			background-image: url(../img/cake-woman--desktop.jpg);
+			margin-left: 0;
+		}
+
+		.cake-child {
+			background-image: url(../img/cake-child--desktop.jpg);
+		}
+	}
+}

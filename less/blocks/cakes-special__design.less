@@ -1,0 +1,219 @@
+.cakes-special__design {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: #fff;
+	padding: 20px;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+
+	.design__number {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		width: 100%;
+
+		.number-of-design {
+			font-family: "Playfair Display";
+			font-weight: bold;
+			font-size: 30px;
+			color: #f40049;
+			vertical-align: middle;
+			padding: 0 0 20px 0;
+			margin: 0;
+		}
+
+		.choise-of-design {
+			font-family: "Playfair Display";
+			font-weight: bold;
+			font-size: 18px;
+			color: #f40049;
+			vertical-align: middle;
+			padding: 3px 0 20px 12px;
+			margin: 0;
+		}
+	}
+
+	.card__berry-assorted,
+	.card__marshmallow {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		margin: 0 auto;
+
+		img {
+			display: block;
+			width: 100%;
+			padding: 0 20px 0 20px;
+			margin: 0 auto;		
+		}
+
+		.description__title {
+			font-family: "Circle";
+			font-size: 14px;
+			font-weight: bold;
+			text-align: center; 
+			font-style: normal;
+			color: black;
+			margin: 0 auto;
+			padding-bottom: 10px;
+		}
+
+		.card__price {
+			font-family: "Playfair Display";
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+			font-style: normal;
+			padding-bottom: 10px;
+			color: black;
+			margin: 0 auto;
+		}
+
+		.description-btn {
+			margin: 0 auto;
+			margin-top: 30px;
+		}
+	}
+
+	.design__radiobuttons {
+		display: none;
+	}
+
+	.card-number {
+		display: none;
+	}
+}
+
+@media @mobile-widths-only {
+
+	.cakes-special__design {
+
+		.design__emblem,
+		.card__berry-assorted {
+			display: none;
+		}
+	}
+}
+
+@media @tablet-widths {
+
+	.cakes-special__design {
+		padding-top: 60px;
+		max-width: 1200px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	
+		.design__number {
+			flex-direction: column;
+			flex-wrap: wrap;
+			width: 100px;
+
+			.number-of-design {
+				font-size: 36px;
+				vertical-align: middle;
+				padding: 0 0 20px 0;
+				margin: 0;
+				width: 90%;
+			}
+
+			.choise-of-design {
+				font-size: 18px;
+				vertical-align: middle;
+				padding: 3px 0 20px 0px;
+				margin: 0;
+				width: 90%;
+			}
+		}
+
+		.design__emblem {
+			display: flex;
+			margin-left: -110px;
+			margin-right: 0px;
+
+			img {
+				margin-top: 100px;
+				margin-left: 0px;
+			}
+		}
+
+		.description-btn {
+			display: none;
+		}
+
+		.design__berry-assorted,
+		.design__marshmallow {
+			margin-bottom: -80px;
+		}
+	}
+}
+
+@media @desktop-widths {
+
+	.cakes-special__design {
+		padding-top: 60px;
+		max-width: 2500px;
+	
+		.design__number {
+			flex-direction: column;
+			flex-wrap: wrap;
+			width: 100px;
+			padding: 0px 80px 40px 40px;
+
+			.number-of-design {
+				font-size: 60px;
+				vertical-align: middle;
+				padding: 0 0 20px 0;
+				margin: 0;
+				width: 90%;
+			}
+
+			.choise-of-design {
+				font-size: 27px;
+				line-height: 30px;
+				vertical-align: middle;
+				padding: 3px 0 0px 0px;
+				margin: 0;
+				width: 90%;
+			}
+		}
+
+		.design__emblem {
+			display: flex;
+			margin-left: -230px;
+			margin-right: 0px;
+
+			img {
+				margin-top: 140px;
+				margin-left: 0px;
+				width: 252px;
+				height: 334px;
+			}
+		}
+
+		.description__title {
+			display: block;
+			font-size: 24px;
+			font-family: "Circle";
+			font-weight: bold;
+			font-style: normal;
+			padding: 0;
+			margin: 0 auto;
+		}
+
+		.card__price {
+			display: block;
+			font-size: 28px;
+			font-family: "Playfair Display";
+			font-weight: bold;
+			font-style: normal;
+			margin-top: -20px;
+		}
+
+		.design__berry-assorted,
+		.design__marshmallow {
+			margin-bottom: -100px;
+		}
+	}
+}

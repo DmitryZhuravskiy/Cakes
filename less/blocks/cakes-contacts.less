@@ -1,0 +1,240 @@
+.cakes-contacts {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 0px;
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	max-height: 850px;
+
+	h3 {
+		display: block;
+		font-size: 24px;
+		line-height: 33px;
+		margin: 0 auto;
+		font-family: "Playfair Display";
+  		font-weight: bold;
+  		font-style: normal;
+  		padding: 15px 0;
+  		text-align: left;
+	}
+
+	span {
+		display: block;
+		font-size: 22px;
+		font-family: "Intro ScriptR H2 Base";
+  		font-weight: normal;
+  		font-style: italic;
+		margin: 0px auto;
+		padding-bottom: 15px;
+		text-align: left;
+	}
+
+	p {
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		font-family: "Circle";
+		margin: 0px auto;
+		padding-bottom: 10px;
+		text-align: left;
+	}
+
+	input[type="text"] {
+		width: 100%;
+		min-height: 52px;
+		margin-bottom: 10px;
+		border: 0px green solid;
+		border-radius: 2px;
+		padding-left: 10px;
+		font-size: 14px;
+
+		&::-webkit-input-placeholder { color: #cccccc; }
+	    &:-ms-input-placeholder { color: #cccccc; }
+	    &::-ms-input-placeholder { color: #cccccc; }
+	    &::placeholder { color: #cccccc; }
+	}
+
+	textarea {
+		font-size: 14px;
+		width: 100%;
+		border: 0px green solid;
+
+		&::-webkit-input-placeholder {
+			color: #cccccc;
+			padding: 10px; 
+		}
+	    &:-ms-input-placeholder { 
+	    	color: #cccccc;
+	    	padding: 10px;  
+	    }
+	    &::-ms-input-placeholder {
+	    	color: #cccccc;
+	    	padding: 10px;  
+	    }
+	    &::placeholder {
+	    	color: #cccccc;
+	    	padding: 10px;  
+	    }
+	}
+
+	.cakes-contacts__btn {
+		margin: 20px auto;
+		margin-bottom: 30px;
+	}
+
+	.cakes-contacts__phone-mail-social {
+
+		.cakes-contacts-phone, 
+		.cakes-contacts__mail {	
+			margin-bottom: 22px;
+		}
+
+		.cakes-contacts__social {
+			margin-bottom: 15px;
+		}
+
+		ul {
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: row;
+			list-style-type: none;
+			margin-bottom: 55px;
+
+			li {
+				display: flex;
+				justify-content: space-around;
+				flex-direction: column;
+				width: 64px;
+				height: 64px;
+				border-radius: 50%;
+				background-color: white;
+				list-style-type: none;
+				margin-right: 30px;
+				margin-left: 0;
+
+				a {	
+					display: flex;
+					justify-content: space-around;
+					flex-direction: row;
+				}
+			}
+		}
+	}
+
+	.cakes-contacts__strawberry {
+		display: none;
+	}
+}
+
+@media @tablet-widths {
+
+	.cakes-contacts {
+		flex-direction: row;
+		justify-content: space-between;
+		max-width: 1200px;
+		margin-top: 48px;
+		max-height: 1250px;
+
+		.cakes-contacts__title {
+			width: 100%;
+			margin-bottom: 23px;
+
+			h3 {
+				margin-left: 48px;
+				font-size: 28px;
+			}
+
+			span {
+				margin-left: 48px;
+				font-size: 22px;
+			}
+		}
+
+		form {
+			width: 40%;
+			margin: 0 0 100px 48px;
+
+			input[type="submit"] {
+				margin-left: 0;
+			}
+		}
+
+		.cakes-contacts__phone-mail-social {
+			width: 40%;
+		}
+	}
+}
+
+@media @desktop-widths {
+
+	.cakes-contacts {
+		max-width: 5000px;
+		margin-top: 85px;
+
+		.cakes-contacts__title {
+			width: 100%;
+			margin-bottom: 23px;
+
+			h3 {
+				margin-left: 74px;
+				font-size: 40px;
+			}
+
+			span {
+				margin-left: 74px;
+				font-size: 35px;
+			}
+		}
+
+		form {
+			width: 45%;
+			margin: 0 0 300px 78px;
+
+			p {
+				font-size: 20px;
+			}
+
+			input[type="text"],
+			textarea {
+				border: 0px green solid;
+				border-bottom: 1px #c9bcbb solid;
+				border-radius: 0;
+				background: #fbebea;
+
+				&::-webkit-input-placeholder {
+					color: #cccccc;
+
+				}
+			    &:-ms-input-placeholder { 
+			    	color: #cccccc;
+ 
+			    }
+			    &::-ms-input-placeholder {
+			    	color: #cccccc;
+  
+			    }
+			    &::placeholder {
+			    	color: #cccccc; 
+			    }
+			}
+
+			input[type="submit"] {
+				margin-left: 0;
+			}
+
+			textarea {
+				row: 1;
+			}
+		}
+
+		.cakes-contacts__phone-mail-social {
+
+			p {
+				font-size: 20px;
+				line-height: 28px;
+			}
+		}
+	}
+}

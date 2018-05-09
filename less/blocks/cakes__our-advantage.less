@@ -1,0 +1,202 @@
+.cakes__our-advantage {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px 0;
+	width: 100%;
+	max-width: 420px;
+	margin: 0 auto;
+	max-height: 410px;
+
+	.our-advantage__title {
+		margin: 0 auto;
+
+		h3 {
+			display: block;
+			font-size: 24px;
+			line-height: 33px;
+			margin: 0 auto;
+			font-family: "Playfair Display";
+  			font-weight: bold;
+  			font-style: normal;
+  			padding: 15px 0;
+  			text-align: center;
+		}
+		
+		span {
+			display: block;
+			font-size: 22px;
+			font-family: "Intro ScriptR H2 Base";
+  			font-weight: normal;
+  			font-style: italic;
+			margin: 0px auto;
+			padding-bottom: 15px;
+			text-align: center;
+		}
+	}
+
+	.our-advantage__advantage-card {
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+
+	.advantage-card__natural-title,
+	.advantage-card__fresh-title {
+		font-size: 16px;
+		font-family: "Circle";
+  		font-weight: bold;
+  		text-align: center;
+  		margin-bottom: -10px;
+	}
+
+	.advantage-card__natural-text,
+	.advantage-card__fresh-text {
+		font-size: 14px;
+		font-family: "Circle";
+  		font-weight: normal;
+  		text-align: center;
+  		max-width: 380px;
+	}
+}
+
+@media @mobile-widths-only {
+	.our-advantage__img {
+		display: none;
+	}
+}
+
+@media @tablet-widths {
+
+	.cakes__our-advantage {
+		justify-content: flex-end;
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+		max-height: 610px;
+		position: relative;
+
+		.our-advantage__img {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 120px;
+
+			img {
+				width: 285px;
+				height: 310px;
+			}
+		}
+
+		.our-advantage__title {
+			margin: 0 auto;
+			width: 100%;
+
+			h3 {
+				font-size: 28px;
+			}
+			
+			span {
+				font-size: 26px;
+			}
+		}
+
+		.our-advantage__list {
+			width: 265px;
+			padding-top: 60px;
+
+			.our-advantage__advantage-card {
+				position: relative;
+
+				img {
+					position: absolute;
+					top: 0;
+					left: -85px;
+				}
+			}
+
+			.advantage-card__fresh {
+				
+				img {
+					left: -100px;
+				}
+			}	
+		}
+
+		.advantage-card__natural-title,
+		.advantage-card__fresh-title {
+	  		text-align: left;
+		}
+
+		.advantage-card__natural-text,
+		.advantage-card__fresh-text {
+	  		text-align: left;
+		}
+	}
+}
+
+@media @desktop-widths {
+
+	.cakes__our-advantage {
+		width: 100%;
+		max-width: 4000px;
+		margin: 0 auto;
+		max-height: 410px;
+		position: relative;
+		justify-content: space-around;
+		max-height: 700px;
+
+		.our-advantage__title {
+			margin: 0 auto;
+
+			h3 {
+				font-size: 40px;
+				line-height: 50px;
+				padding-bottom: 40px;
+			}
+			
+			span {
+				font-size: 35px;
+				padding-bottom: 120px;
+			}
+		}
+
+		.our-advantage__img {
+			display: block;
+			position: absolute;
+			left: 0px;
+			top: 120px;
+			z-index: 2;
+
+			img {
+				width: 507px;
+				height: 547px;
+			}
+		}
+
+		.our-advantage__list {
+			margin-left: 420px;
+			width: 380px;
+
+			.advantage-card {
+				margin-top: 35px;
+
+				img {
+					display: none;
+				}
+			}
+
+			.advantage-card__natural-title,
+			.advantage-card__fresh-title {
+				font-size: 20px;
+			}
+
+			.advantage-card__natural-text,
+			.advantage-card__fresh-text {
+				font-size: 20px;
+				line-height: 24px;
+			}
+		}
+	}
+}

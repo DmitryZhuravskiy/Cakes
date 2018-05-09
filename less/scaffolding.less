@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Circle";
+  font-weight: normal;
+  font-style: normal;
+
+  src: url("../fonts/Circe-Regular.woff") format("woff"), 
+  url("../fonts/Circle-Regular.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "Circle";
+  font-weight: bold;
+  font-style: normal;
+
+  src: url("../fonts/Circe-Bold.woff") format("woff"), 
+  url("../fonts/Circe-Bold.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "Intro ScriptR H2 Base";
+  font-weight: normal;
+  font-style: italic;
+
+  src: url("../fonts/IntroScriptR-H2Base.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-style: normal;
+
+  src: url("../fonts/PlayfairDisplaySC-Bold.woff") format("woff"), 
+  url("../fonts/PlayfairDisplaySC-Bold.ttf") format("truetype"); 
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-style: italic;
+
+  src: url("../fonts/PlayfairDisplay-BoldItalic.woff") format("woff"), 
+  url("../fonts/PlayfairDisplay-BoldItalic.ttf") format("truetype"); 
+}
+
+
+body {
+	font-size: 14px;
+	line-height: 18px;
+	font-family: "Circle Regular", Arial, sans-serif;
+	color: #000;
+	font-style: normal;
+	background-color: #fbebea;
+	margin-right: -1px;
+	margin-left: -1px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.btn {
+	display: block;
+	padding: 19px 65px;
+	font-weight: 12px;
+	line-height: 13px;
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-shadow: none;
+	background-color: #f50049;
+	border-radius: 25px;
+
+	&:hover {
+		text-decoration: none;
+		border-color: #d5c9bd;
+	}
+
+	&:active {
+		color: rgba(0, 0, 0, 0.3);
+		text-decoration: none;
+		background-color: #d5c9bd;
+		border-color: #d5c9bd;
+		outline: none;
+	}
+
+	&:focus {
+		text-decoration: none;
+		outline: none;
+	}
+
+	input[type="text"] {
+		background-color: #f2f2f2;
+
+		&:hover {
+			background-color: #e5e5e5;
+		}
+
+		&:active {
+			background-color: #fff;
+			border: 4px #e5e5e5 solid;	
+		}
+	}
+}
+
+.container {
+	padding: 0 20px;
+	margin: 0;
+}
+
+@media @desktop-widths {
+
+	.container {
+		padding: 0 74px;
+	}
+}

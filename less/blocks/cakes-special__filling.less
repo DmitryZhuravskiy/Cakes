@@ -1,0 +1,256 @@
+.cakes-special__filling {
+	display: flex;
+	justify-content: column;
+	flex-wrap: wrap;
+	background-color: #fff;
+	padding: 20px;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+
+	.filling__number {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		width: 100%;
+
+		.number-of-filling {
+			font-family: "Playfair Display";
+			font-weight: bold;
+			font-size: 30px;
+			color: #f40049;
+			vertical-align: middle;
+			padding: 0 0 20px 0;
+			margin: 0;
+		}
+
+		.choise-of-filling {
+			font-family: "Playfair Display";
+			font-weight: bold;
+			font-size: 18px;
+			color: #f40049;
+			vertical-align: middle;
+			padding: 3px 0 20px 12px;
+			margin: 0;
+		}
+	}
+
+	.filling__chocolate {
+		display: block;
+		position: relative;
+
+		img {
+				width: 100%;
+				padding: 0 20px 0 20px;
+		}
+
+		p {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			color: white;
+			font-size: 20px;
+		}
+	}
+
+	.filling__radiobuttons {
+		display: block;
+		width: 200px;
+		padding: 5px;
+		margin: 0 auto;
+	}
+
+	.filling__descriptions {
+		width: 100%;
+
+		.description__title {
+			font-family: "Circle";
+			font-size: 13px;
+			font-weight: bold;
+			text-align: left;
+			margin-left: 0; 
+			font-style: normal;
+		}
+
+		.filling__description-ganash {
+			width: 280px;
+			font-size: 13px;
+		}
+
+		.filling__price {
+			font-family: "Playfair Display";
+			font-size: 16px;
+			font-weight: bold;
+			text-align: center;
+			margin-left: 0; 
+			font-style: normal;
+			padding-bottom: 10px;
+		}
+
+		.description-btn {
+			margin: 0 auto;
+		}
+	}
+}
+	
+@media @tablet-widths {
+
+	.cakes-special__filling {
+		padding-top: 60px;
+		max-width: 1200px;
+		flex-direction: row;
+		justify-content: space-between;
+	
+		.filling__number {
+			flex-direction: column;
+			flex-wrap: wrap;
+			width: 100px;
+
+			.number-of-filling {
+				font-size: 36px;
+				vertical-align: middle;
+				padding: 0 0 20px 0;
+				margin: 0;
+				width: 90%;
+			}
+
+			.choise-of-filling {
+				font-size: 18px;
+				vertical-align: middle;
+				padding: 3px 0 20px 0px;
+				margin: 0;
+				width: 90%;
+			}
+		}
+
+		.filling__chocolate {
+			display: block;
+			position: relative;
+
+			img {
+				width: 100%;
+				padding: 0 20px 0 20px;
+			}
+
+			p {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				color: white;
+				font-size: 20px;
+			}
+		}
+
+		.filling__radiobuttons {
+			display: none;
+		}
+		
+		.filling__descriptions {
+			margin-left: 40px;
+			width: 260px;
+
+			.description__title {
+				font-size: 18px;
+				margin-left: 0; 
+				font-style: normal;
+				padding-top: 25px;
+			}
+
+			.filling__description-ganash {
+				width: 280px;
+				font-size: 14px;
+				margin-top: -10px;
+			}
+
+			.filling__price {
+				font-family: "Playfair Display";
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+				margin-left: 0; 
+				font-style: normal;
+				padding-bottom: 10px;
+			}
+
+			.description-btn {
+				margin: 0 auto;
+				padding: 15px 45px;
+			}
+		}
+	}
+}
+
+@media @desktop-widths {
+
+	.cakes-special__filling {
+		padding-top: 60px;
+		max-width: 2500px;
+		margin-bottom: 20px;
+	
+		.filling__number {
+			flex-direction: column;
+			flex-wrap: wrap;
+			width: 100px;
+			padding: 0px 80px 40px 40px;
+
+			.number-of-filling {
+				font-size: 60px;
+				vertical-align: middle;
+				padding: 0 0 20px 0;
+				margin: 0;
+				width: 90%;
+			}
+
+			.choise-of-filling {
+				font-size: 27px;
+				line-height: 30px;
+				vertical-align: middle;
+				padding: 3px 0 0px 0px;
+				margin: 0;
+				width: 90%;
+			}
+		}
+
+		.filling__chocolate {
+
+			img {
+				width: 100%;
+				margin: 20px;
+				padding: 0 0px 0 20px;
+			}
+		}
+
+		.filling__descriptions {
+			padding-left: 40px;
+			width: 300px;
+			padding-top: 60px;
+
+			.description__title {
+				font-size: 20px;
+				margin-left: 0; 
+				font-style: normal;
+				padding-top: 25px;
+			}
+
+			.filling__description-ganash {
+				width: 310px;
+				font-size: 18px;
+				line-height: 24px;
+				margin-top: -10px;
+			}
+
+			.filling__price {
+				font-size: 22px;
+				text-align: left;
+				margin-left: 0; 
+				font-style: normal;
+				padding-bottom: 50px;
+			}
+
+			.description-btn {
+				margin-left: 0;
+				padding: 15px 45px;
+			}
+		}
+	}
+}

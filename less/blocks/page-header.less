@@ -1,0 +1,154 @@
+.page-header {
+	margin-top: -8px;
+	min-height: 40px;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: nowrap;
+	min-width: 300px
+	width: 100%;
+	background: #fff;
+	position: relative;
+	z-index: 3;
+
+	.phone-number {
+		display: none;
+		font-size: 14px;
+		width: 130px;
+		min-height: 40px;
+		margin-top: 18px;
+		vertical-align: center;
+		font-family: "Circle";
+
+	}
+
+	.title-burger {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+
+		.page-header__title {
+			display: inline-block;
+			font-family: "Playfair Display";
+			font-size: 18px;
+			text-align: left;
+			vertical-align: middle;
+			flex-grow: 1;
+			margin-right: 20px;
+		}
+
+		.main-nav__toggle {
+			margin-top: 20px;
+			display: inline-block;
+			font-size: 0px;
+			width: 18px;
+			height: 2px;
+			background: #000;
+			position: relative;
+			flex-grow: 0;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: 5px;
+				left: 0;
+				width: 18px;
+				height: 2px;
+				background: #000;
+			}
+
+			&::after {
+				top: 10px;
+			}
+		}
+	}
+
+	.navigation {
+		display: none;
+		position: absolute;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			display: flex;
+			list-style-type: none;
+
+			li {
+				min-width: 320px;
+				padding: 0 17px;
+				background: #e7e7e7;
+				border-top: 1px #e4e4e4 solid;
+				border-bottom: 1px #dedede solid;
+
+				a {
+					text-transform: uppercase;
+					text-align: center;
+					vertical-align: middle;
+					text-decoration: none;
+					color: #000;
+					font-size: 13px;
+				}
+			}
+		}
+	}
+}
+
+@media @tablet-widths {
+
+	.page-header {
+
+		.title-burger {
+			display: inline-block;
+			width: 130px;
+			flex-grow: 1;
+		}
+
+		.phone-number {
+			display: block;
+			flex-grow: 0;
+		}
+	}
+}
+
+@media @desktop-widths {
+
+	.page-header {
+		background: #fbebea;
+		padding-top: 30px;
+
+		.title-burger {
+			width: 70px;
+			flex-grow: 0;
+
+			.main-nav__toggle {
+				display: none;
+			}	
+		}
+
+		.navigation {
+			display: inline-block;
+			position: relative;
+			margin-top: 22px;
+			flex-grow: 1;
+
+			ul {
+				justify-content: flex-start;
+				flex-direction: row;
+
+				li {
+					min-width: auto;
+					padding-left: 40px;
+					background: #fbebea;
+					border-top: 0px green solid;
+					border-bottom: 0px green solid;
+				}
+			}
+		}
+
+		.phone-number {
+			display: inline-block;
+			align-content: flex-end;
+			flex-grow: 0;
+		}
+	}
+}
