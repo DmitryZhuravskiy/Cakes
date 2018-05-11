@@ -14,7 +14,8 @@
 		flex-wrap: nowrap;
 		width: 100%;
 
-		.number-of-filling {
+		.number-of-filling,
+		.choise-of-filling {
 			font-family: "Playfair Display";
 			font-weight: bold;
 			font-size: 30px;
@@ -25,31 +26,28 @@
 		}
 
 		.choise-of-filling {
-			font-family: "Playfair Display";
-			font-weight: bold;
 			font-size: 18px;
-			color: #f40049;
-			vertical-align: middle;
 			padding: 3px 0 20px 12px;
-			margin: 0;
 		}
 	}
 
 	.filling__chocolate {
-		display: block;
+		display: flex;
 		position: relative;
+		margin: 0 auto;
 
 		img {
-				width: 100%;
-				padding: 0 20px 0 20px;
+			width: 100%;
+			padding: 0;
+			margin: 0 auto;
 		}
 
 		p {
 			position: absolute;
-			right: 0;
-			bottom: 0;
+			right: 10px;
+			bottom: -5px;
 			color: white;
-			font-size: 20px;
+			font-size: 12px;
 		}
 	}
 
@@ -64,22 +62,19 @@
 		width: 100%;
 
 		.description__title {
-			font-family: "Circle";
-			font-size: 13px;
+			font-size: 16px;
+			line-height: 16px;
 			font-weight: bold;
 			text-align: left;
-			margin-left: 0; 
-			font-style: normal;
 		}
 
 		.filling__description-ganash {
 			width: 280px;
-			font-size: 13px;
 		}
 
 		.filling__price {
 			font-family: "Playfair Display";
-			font-size: 16px;
+			font-size: 18px;
 			font-weight: bold;
 			text-align: center;
 			margin-left: 0; 
@@ -109,7 +104,7 @@
 			.number-of-filling {
 				font-size: 36px;
 				vertical-align: middle;
-				padding: 0 0 20px 0;
+				padding: 0 0 5px 0;
 				margin: 0;
 				width: 90%;
 			}
@@ -129,15 +124,11 @@
 
 			img {
 				width: 100%;
-				padding: 0 20px 0 20px;
+				padding: 0 20px;
 			}
 
 			p {
-				position: absolute;
-				right: 0;
-				bottom: 0;
-				color: white;
-				font-size: 20px;
+				display: none;
 			}
 		}
 
@@ -163,17 +154,13 @@
 			}
 
 			.filling__price {
-				font-family: "Playfair Display";
 				font-size: 20px;
-				font-weight: bold;
-				text-align: center;
-				margin-left: 0; 
-				font-style: normal;
+				text-align: left;
 				padding-bottom: 10px;
 			}
 
 			.description-btn {
-				margin: 0 auto;
+				margin-left: 0;
 				padding: 15px 45px;
 			}
 		}
@@ -183,73 +170,53 @@
 @media @desktop-widths {
 
 	.cakes-special__filling {
-		padding-top: 60px;
 		max-width: 2500px;
 		margin-bottom: 20px;
 	
 		.filling__number {
-			flex-direction: column;
-			flex-wrap: wrap;
-			width: 100px;
 			padding: 0px 80px 40px 40px;
 
 			.number-of-filling {
 				font-size: 60px;
-				vertical-align: middle;
 				padding: 0 0 20px 0;
-				margin: 0;
-				width: 90%;
 			}
 
 			.choise-of-filling {
 				font-size: 27px;
 				line-height: 30px;
-				vertical-align: middle;
 				padding: 3px 0 0px 0px;
-				margin: 0;
-				width: 90%;
 			}
 		}
 
 		.filling__chocolate {
 
 			img {
-				width: 100%;
 				margin: 20px;
-				padding: 0 0px 0 20px;
+				padding: 0 0 0 20px;
 			}
 		}
 
 		.filling__descriptions {
-			padding-left: 40px;
 			width: 300px;
 			padding-top: 60px;
 
 			.description__title {
 				font-size: 20px;
-				margin-left: 0; 
-				font-style: normal;
-				padding-top: 25px;
 			}
 
 			.filling__description-ganash {
 				width: 310px;
 				font-size: 18px;
 				line-height: 24px;
-				margin-top: -10px;
 			}
 
 			.filling__price {
 				font-size: 22px;
-				text-align: left;
-				margin-left: 0; 
-				font-style: normal;
 				padding-bottom: 50px;
 			}
 
 			.description-btn {
-				margin-left: 0;
-				padding: 15px 45px;
+				padding: 15px 60px;
 			}
 		}
 	}

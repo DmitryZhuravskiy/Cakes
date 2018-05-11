@@ -1,34 +1,25 @@
 .cakes__our-advantage {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 20px 0;
-	width: 100%;
 	max-width: 420px;
 	margin: 0 auto;
 	max-height: 410px;
 
 	.our-advantage__title {
 		margin: 0 auto;
+		display: block;
+		width: 100%;
 
 		h3 {
 			display: block;
-			font-size: 24px;
 			line-height: 33px;
 			margin: 0 auto;
-			font-family: "Playfair Display";
-  			font-weight: bold;
-  			font-style: normal;
-  			padding: 15px 0;
   			text-align: center;
+  			padding-top: 50px;
 		}
 		
 		span {
 			display: block;
-			font-size: 22px;
-			font-family: "Intro ScriptR H2 Base";
-  			font-weight: normal;
-  			font-style: italic;
-			margin: 0px auto;
 			padding-bottom: 15px;
 			text-align: center;
 		}
@@ -45,17 +36,13 @@
 	.advantage-card__natural-title,
 	.advantage-card__fresh-title {
 		font-size: 16px;
-		font-family: "Circle";
   		font-weight: bold;
   		text-align: center;
-  		margin-bottom: -10px;
+  		margin-bottom: -20px;
 	}
 
 	.advantage-card__natural-text,
 	.advantage-card__fresh-text {
-		font-size: 14px;
-		font-family: "Circle";
-  		font-weight: normal;
   		text-align: center;
   		max-width: 380px;
 	}
@@ -71,9 +58,7 @@
 
 	.cakes__our-advantage {
 		justify-content: flex-end;
-		width: 100%;
 		max-width: 1200px;
-		margin: 0 auto;
 		max-height: 610px;
 		position: relative;
 
@@ -90,16 +75,7 @@
 		}
 
 		.our-advantage__title {
-			margin: 0 auto;
 			width: 100%;
-
-			h3 {
-				font-size: 28px;
-			}
-			
-			span {
-				font-size: 26px;
-			}
 		}
 
 		.our-advantage__list {
@@ -127,11 +103,13 @@
 		.advantage-card__natural-title,
 		.advantage-card__fresh-title {
 	  		text-align: left;
+	  		margin-bottom: -7px;
 		}
 
 		.advantage-card__natural-text,
 		.advantage-card__fresh-text {
 	  		text-align: left;
+	  		line-height: 18px;
 		}
 	}
 }
@@ -139,26 +117,22 @@
 @media @desktop-widths {
 
 	.cakes__our-advantage {
-		width: 100%;
 		max-width: 4000px;
 		margin: 0 auto;
 		max-height: 410px;
-		position: relative;
 		justify-content: space-around;
-		max-height: 700px;
+		max-height: 780px;
 
 		.our-advantage__title {
 			margin: 0 auto;
 
 			h3 {
-				font-size: 40px;
 				line-height: 50px;
-				padding-bottom: 40px;
+				padding-bottom: 10px;
 			}
 			
 			span {
-				font-size: 35px;
-				padding-bottom: 120px;
+				padding-bottom: 10px;
 			}
 		}
 
@@ -166,7 +140,7 @@
 			display: block;
 			position: absolute;
 			left: 0px;
-			top: 120px;
+			top: 130px;
 			z-index: 2;
 
 			img {
@@ -178,6 +152,7 @@
 		.our-advantage__list {
 			margin-left: 420px;
 			width: 380px;
+			height: 380px;
 
 			.advantage-card {
 				margin-top: 35px;

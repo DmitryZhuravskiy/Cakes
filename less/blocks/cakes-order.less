@@ -2,10 +2,7 @@
 	display: flex;
 	justify-content: column;
 	flex-wrap: wrap;
-	padding: 0px;
-	width: 100%;
 	margin: 0;
-	padding: 0;
 	max-height: 583px;
 	background: linear-gradient(to top, #d82934 0%, #e3353d 35%, #e3353d 100%);
 	z-index: 2;
@@ -15,7 +12,7 @@
 		flex-direction: column;
 		margin: 0 auto;
 		margin-top: 32px;
-		padding: 0px;
+		padding: 0;
 		max-width: 282px;
 		color: white;
 		height: 483px;
@@ -25,18 +22,13 @@
 
 		h3 {
 			display: block;
-			font-size: 24px;
 			line-height: 33px;
 			margin: 0 auto;
-			font-family: "Playfair Display";
-	  		font-weight: bold;
-	  		font-style: normal;
 	  		text-align: left;
 	  		padding-bottom: 32px;
 		}
 
 		.cakes-order__step {
-
 			padding-bottom: 23px;
 			position: relative;
 			padding-left: 25px;
@@ -44,7 +36,7 @@
 
 			.step__number {
 				position: absolute;
-				top: 5px;
+				top: -25px;
 				left: 0;
 				font-size: 35px;
 				font-family: "Playfair Display";
@@ -54,11 +46,9 @@
 
 			.step__title,
 			.step__description {
-
 				display: block;
 				font-size: 15px;
 				line-height: 18px;
-				font-family: "Circle";
 				text-align: left;
 				font-weight: bold;
 				padding: 0;
@@ -66,7 +56,8 @@
 			}
 
 			.step__title {
-				line-height: 30px;
+				line-height: 20px;
+				margin-bottom: -10px;
 			}
 
 			.step__description {
@@ -81,21 +72,18 @@
 
 	.cakes-order {
 		max-height: 583px;
+		background: red;
 		background: url("../img/box-with-cake--tablet.jpg") no-repeat;
 		background-size: cover;
 
 		.cakes-order__container {
 			margin: 52px 60px 0 55%;
-			padding: 0px;
 			max-width: 700px;
-			color: white;
 			height: 483px;
-			z-index: 3;
 			background: transparent;
 
 			h3 {
-				font-size: 28px;
-				margin: 0;;
+				margin: 0;
 		  		text-align: left;
 		  		padding-bottom: 40px;
 			}
@@ -103,7 +91,6 @@
 			.cakes-order__step {
 				padding-bottom: 38px;
 				max-height: 150px;
-
 
 				.step__number {
 					left: -15px;
@@ -120,28 +107,20 @@
 		max-height: 1000px;
 		min-height: 702px;
 		background: url("../img/box-with-cake--desktop.jpg") no-repeat;
-		background-size: cover;
 
 		.cakes-order__container {
-			margin: 10% 60px 0 67%;
-			padding: 0px;
+			margin: 10% 0 0 740px;
 			max-width: 690px;
-			color: white;
 			height: 502px;
-			z-index: 3;
-			background: transparent;
 
 			h3 {
-				font-size: 40px;
-				margin: 0;
-		  		text-align: left;
 		  		padding-bottom: 50px;
 			}
 
 			.cakes-order__step {
 				padding-bottom: 15px;
-				max-height: 150px;
 				padding-left: 45px;
+				max-width: 500px;
 
 				.step__number {
 					left: 0;

@@ -4,19 +4,15 @@
 	flex-wrap: wrap;
 	padding: 20px 0;
 	width: 100%;
-	max-width: 440px;
 	margin: 0 auto;
 	max-height: 300px;
+	max-width: 440px;
 
 	h3 {
 		margin: 20px auto;
 		text-align: center;
 		padding-bottom: 20px;
 		width: 100%;
-		font-size: 24px;
-		line-height: 30px;
-		font-weight: bold;
-		font-family: "Playfair Display";
 	}
 
 	.comments {
@@ -27,7 +23,7 @@
 		img {
 			display: block;
 			margin: 0 auto;
-			border-radius: 30px;
+			border-radius: 50%;
 		}
 
 		.comments__name {
@@ -35,15 +31,14 @@
 			font-size: 13px;
 			font-weight: bold;
 			text-align: center;
-			font-family: "Circle";
 		}
 
 		.comments__profession-age {
-			margin: 0 auto 10px auto;
+			margin: 0 auto;
 			font-size: 13px;
-			font-weight: normal;
 			text-align: center;
-			font-family: "Circle";
+			line-height: 13px;
+			margin-bottom: 13px;
 		}
 
 		.comments__text {
@@ -57,7 +52,6 @@
 			bottom: -20px;
 			right: 0;
 			font-size: 13px;
-			font-family: "Circle";
 			color: #f74679;
 		}
 	}
@@ -67,34 +61,21 @@
 
 	.cakes-comments {	
 		justify-content: row;
-		padding: 20px 0;
-		width: 100%;
 		max-width: 1200px;
-		margin: 0 auto;
-		max-height: 300px;
 
 		h3 {
 			margin: 35px auto;
-			padding-bottom: 20px;
-			width: 100%;
-			font-size: 24px;
-			font-weight: bold;
-			font-family: "Playfair Display";
 		}
 
 		.comments {
-			display: flex;
 			flex-direction: row;
 			flex-wrap: nowrap;
-			position: relative;
 			margin: 0 auto;
 
 			img {
-				display: block;
 				width: 109px;
 				height: 108px;
 				margin: 25px 0 0 0;
-				border-radius: 55px;
 			}
 
 			.comments__about {
@@ -106,10 +87,7 @@
 					font-size: 16px;
 				}
 
-				.comments__profession-age {
-					font-size: 14px;
-				}
-
+				.comments__profession-age,
 				.comments__text {
 					font-size: 14px;
 				}
@@ -133,7 +111,6 @@
 
 		h3 {
 			margin: 70px auto;
-			font-size: 40px;
 		}
 
 		.comments {
@@ -142,12 +119,9 @@
 				width: 209px;
 				height: 209px;
 				margin: 25px 0 0 0;
-				border-radius: 105px;
 			}
 
 			.comments__about {
-				display: flex;
-				flex-direction: column;
 				width: 370px;
 				margin-left: 50px;
 

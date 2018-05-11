@@ -2,7 +2,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	padding: 30px 0 0 0;
-	width: 100%;
 	max-height: 850px;
 	color: white;
 	background-color: #898989;
@@ -55,10 +54,17 @@
 		.footer__copyright {
 			color: #b3b3b3;
 			font-size: 12px;
-			font-family: "Circle";
 			border-top: 1px #b3b3b3 solid;
 		}
 	}
+}
+
+@media @mobile-widths-only {
+
+	.social-links-wrapper-2 {
+		display: none;
+	}
+	
 }
 
 @media @tablet-widths {
@@ -132,7 +138,6 @@
 				order: 1;
 				color: #b3b3b3;
 				font-size: 12px;
-				font-family: "Circle";
 				vertical-align: middle;
 				margin-left: 30%;
 			}
@@ -143,7 +148,6 @@
 @media @desktop-widths {
 	
 	.footer {
-		width: 100%;
 		color: black;
 		background-color: #e8e8e8;
 
@@ -223,7 +227,6 @@
 				vertical-align: middle;
 				padding-top: 16px;
 			}
-			
 		}
 	}
 }

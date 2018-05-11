@@ -11,10 +11,10 @@
   src: url("../fonts/Circe-Bold.woff") format("woff"), url("../fonts/Circe-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Intro ScriptR H2 Base";
+  font-family: "Intro Script";
   font-weight: normal;
   font-style: italic;
-  src: url("../fonts/IntroScriptR-H2Base.ttf") format("truetype");
+  src: url("../fonts/Intro_Script_R_H2_Base.ttf") format("truetype");
 }
 @font-face {
   font-family: "Playfair Display";
@@ -31,9 +31,10 @@
 body {
   font-size: 14px;
   line-height: 18px;
-  font-family: "Circle Regular", Arial, sans-serif;
+  font-family: "Circle", Arial, sans-serif;
   color: #000;
   font-style: normal;
+  font-weight: normal;
   background-color: #fbebea;
   margin-right: -1px;
   margin-left: -1px;
@@ -94,9 +95,52 @@ img {
   padding: 0 20px;
   margin: 0;
 }
+p {
+  font-family: "Circle";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+span {
+  font-family: "Intro Script";
+  font-weight: normal;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 32px;
+}
+h3 {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 34px;
+}
+@media (min-width: 768px) {
+  span {
+    font-size: 26px;
+    line-height: 48px;
+  }
+  h3 {
+    font-size: 28px;
+    line-height: 52px;
+  }
+}
 @media (min-width: 1200px) {
   .container {
     padding: 0 74px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  span {
+    font-size: 35px;
+    line-height: 67px;
+  }
+  h3 {
+    font-size: 40px;
+    line-height: 75px;
   }
 }
 .page-header {
@@ -104,37 +148,33 @@ img {
   min-height: 40px;
   display: flex;
   justify-content: flex-start;
+  align-content: center;
   flex-wrap: nowrap;
-  min-width: 300px
-	width: 100%;
+  min-width: 300px;
   background: #fff;
   position: relative;
   z-index: 3;
 }
 .page-header .phone-number {
   display: none;
-  font-size: 14px;
   width: 130px;
-  min-height: 40px;
-  margin-top: 18px;
-  vertical-align: center;
-  font-family: "Circle";
 }
-.page-header .title-burger {
+.page-header .page-header__title-burger {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.page-header .title-burger .page-header__title {
+.page-header .page-header__title-burger .page-header__title {
   display: inline-block;
   font-family: "Playfair Display";
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: bold;
   text-align: left;
   vertical-align: middle;
   flex-grow: 1;
   margin-right: 20px;
 }
-.page-header .title-burger .main-nav__toggle {
+.page-header .page-header__title-burger .main-nav__toggle {
   margin-top: 20px;
   display: inline-block;
   font-size: 0px;
@@ -144,8 +184,8 @@ img {
   position: relative;
   flex-grow: 0;
 }
-.page-header .title-burger .main-nav__toggle::before,
-.page-header .title-burger .main-nav__toggle::after {
+.page-header .page-header__title-burger .main-nav__toggle::before,
+.page-header .page-header__title-burger .main-nav__toggle::after {
   content: "";
   position: absolute;
   top: 5px;
@@ -154,7 +194,7 @@ img {
   height: 2px;
   background: #000;
 }
-.page-header .title-burger .main-nav__toggle::after {
+.page-header .page-header__title-burger .main-nav__toggle::after {
   top: 10px;
 }
 .page-header .navigation {
@@ -183,7 +223,7 @@ img {
   font-size: 13px;
 }
 @media (min-width: 768px) {
-  .page-header .title-burger {
+  .page-header .page-header__title-burger {
     display: inline-block;
     width: 130px;
     flex-grow: 1;
@@ -198,11 +238,11 @@ img {
     background: #fbebea;
     padding-top: 30px;
   }
-  .page-header .title-burger {
+  .page-header .page-header__title-burger {
     width: 70px;
     flex-grow: 0;
   }
-  .page-header .title-burger .main-nav__toggle {
+  .page-header .page-header__title-burger .main-nav__toggle {
     display: none;
   }
   .page-header .navigation {
@@ -224,8 +264,8 @@ img {
   }
   .page-header .phone-number {
     display: inline-block;
-    align-content: flex-end;
     flex-grow: 0;
+    font-size: 15px;
   }
 }
 .cakes-for-sale {
@@ -236,6 +276,8 @@ img {
   padding-top: 110px;
   z-index: 1;
   position: relative;
+  max-width: 100%;
+  margin-right: 20px;
 }
 .cakes-for-sale .cakes-for-sale__fon {
   order: 4;
@@ -245,20 +287,13 @@ img {
   z-index: 1;
 }
 .cakes-for-sale .cakes-for-sale__title {
-  font-family: "Playfair Display";
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 40px;
+  font: bold normal 40px/36px "Playfair Display";
   text-align: center;
   margin: 0 auto;
   padding-bottom: 20px;
-  min-width: 120px;
   z-index: 2;
 }
-.cakes-for-sale .cakes-for-sale__sub-title {
-  font-size: 22px;
-  font-family: "Intro ScriptR H2 Base";
-  font-style: italic;
+.cakes-for-sale span {
   width: 100%;
   text-align: center;
   margin: 0 auto;
@@ -277,8 +312,6 @@ img {
   position: relative;
   width: 100%;
   padding-top: 25px;
-  font-family: "Circle";
-  font-size: 16px;
 }
 .cakes-for-sale .cakes-for-sale__natural img,
 .cakes-for-sale .cakes-for-sale__free img {
@@ -300,6 +333,7 @@ img {
     flex-direction: column;
     flex-wrap: nowrap;
     width: 480px;
+    margin-right: 0;
   }
   .cakes-for-sale .cakes-for-sale__title {
     font-size: 55px;
@@ -354,15 +388,30 @@ img {
     order: 4;
     position: absolute;
     top: 100px;
-    right: -420px;
+    right: -300px;
     z-index: 1;
-    width: 570px;
-    height: 571px;
+    width: 450px;
+    height: 451px;
   }
 }
 @media (min-width: 1200px) {
   .cakes-for-sale {
     width: 100%;
+  }
+  .cakes-for-sale .cakes-for-sale__title {
+    font-size: 78px;
+    line-height: 94px;
+  }
+  .cakes-for-sale .cakes-for-sale__sub-title {
+    font-size: 40px;
+    line-height: 70px;
+  }
+  .cakes-for-sale .cakes-for-sale__natural-free {
+    width: 650px;
+  }
+  .cakes-for-sale .cakes-for-sale__natural-free .cakes-for-sale__natural,
+  .cakes-for-sale .cakes-for-sale__natural-free .cakes-for-sale__free {
+    width: 260px;
   }
   .cakes-for-sale .cakes-for-sale__fon {
     order: 4;
@@ -370,8 +419,8 @@ img {
     top: 100px;
     left: 540px;
     z-index: 1;
-    width: 940px;
-    height: 941px;
+    width: 540px;
+    height: 541px;
   }
 }
 .cakes-catalog {
@@ -379,15 +428,12 @@ img {
   flex-direction: column;
   flex-wrap: wrap;
   min-height: 790px;
-  max-width: 100%;
   justify-content: space-around;
   margin-top: 30px;
 }
 .cakes-catalog .cakes-catalog__title {
-  text-align: middle;
-  margin: 0 auto;
+  text-align: center;
   margin-bottom: 35px;
-  font-size: 20px;
 }
 .cakes-catalog .cakes-catalog__type {
   display: block;
@@ -400,20 +446,17 @@ img {
   margin: 0 auto;
   margin-bottom: 10px;
 }
-.cakes-catalog .cakes-catalog__type span {
+.cakes-catalog .cakes-catalog__type .cakes-catalog__kind-of-cakes {
   display: block;
   margin: 10px 0 0 10px;
-  font-size: 12px;
-  height: 20px;
   padding: 0;
 }
-.cakes-catalog .cakes-catalog__type p {
+.cakes-catalog .cakes-catalog__type .cakes-catalog__how-many {
   display: block;
   margin-left: 10px;
-  margin-right: -20px;
+  margin-top: -6px;
   font-size: 12px;
   color: grey;
-  font-family: "Circle";
   padding: 0;
 }
 .cakes-catalog .cakes-catalog__type a {
@@ -442,56 +485,57 @@ img {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0;
+    max-height: 1500px;
   }
   .cakes-catalog .cakes-catalog__title {
     display: block;
-    font-size: 26px;
     text-align: left;
-    margin-left: 20px;
     width: 80%;
   }
   .cakes-catalog .cakes-catalog__type {
     display: block;
-    width: 289px;
-    height: 185px;
-    margin: 20px;
+    min-width: 289px;
+    min-height: 185px;
+    margin: 0;
   }
-  .cakes-catalog .cakes-catalog__type span {
-    padding: 20px 0 0 20px;
-  }
-  .cakes-catalog .cakes-catalog__type p {
-    padding-left: 20px;
+  .cakes-catalog .cakes-catalog__type .cakes-catalog__kind-of-cakes,
+  .cakes-catalog .cakes-catalog__type .cakes-catalog__how-many {
+    margin-left: 22px;
   }
   .cakes-catalog .cake-classic,
   .cakes-catalog .cake-child {
-    width: 420px;
-    height: 390px;
-    margin: 20px;
+    min-width: 400px;
+    min-height: 390px;
+    width: 57%;
+    background-size: cover;
+    margin-bottom: 20px;
   }
   .cakes-catalog .cakes-catalog__wrapper {
-    margin-top: 30px;
-    margin-left: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-content: flex-start;
     min-width: 289px;
-    min-height: 400px;
+    height: 440px;
+    margin-bottom: 20px;
+    width: 40%;
+  }
+  .cakes-catalog .cakes-catalog__wrapper-reverse .cakes-catalog__type {
+    margin-right: 0;
   }
   .cakes-catalog .cake-classic {
     background-image: url(../img/cake-classic--tablet.jpg);
   }
   .cakes-catalog .cake-mousse {
     background-image: url(../img/cake-mousse--tablet.jpg);
-    margin-top: -10px;
   }
   .cakes-catalog .cake-wedding {
     background-image: url(../img/cake-wedding--tablet.jpg);
+    margin-bottom: 0;
   }
   .cakes-catalog .cake-male {
     background-image: url(../img/cake-male--tablet.jpg);
     margin-left: 0;
-    margin-top: -10px;
   }
   .cakes-catalog .cake-woman {
     background-image: url(../img/cake-woman--tablet.jpg);
@@ -503,35 +547,29 @@ img {
 }
 @media (min-width: 1200px) {
   .cakes-catalog {
-    width: 100%;
-    max-width: 1400px;
-  }
-  .cakes-catalog .cakes-catalog__title {
-    margin-left: 60px;
+    max-width: 3000px;
   }
   .cakes-catalog .cakes-catalog__type {
     width: 485px;
     height: 306px;
+    min-width: 410px;
     margin: 0;
+    padding: 0;
+    width: 100%;
   }
-  .cakes-catalog .cakes-catalog__type span {
-    display: block;
+  .cakes-catalog .cakes-catalog__wrapper {
+    min-width: 410px;
+    min-height: 655px;
     margin: 0;
-    padding: 33px 0 0 33px;
-  }
-  .cakes-catalog .cakes-catalog__type p {
-    padding-left: 23px;
-  }
-  .cakes-catalog .cakes-catalog__wrapper,
-  .cakes-catalog .cake-classic,
-  .cakes-catalog .cake-child {
-    height: 655px;
-    margin: 60px;
+    width: 35%;
   }
   .cakes-catalog .cake-classic,
   .cakes-catalog .cake-child {
-    min-width: 694px;
+    min-width: 600px;
     width: 40%;
+    height: 655px;
+    margin-right: 0;
+    margin-bottom: 40px;
   }
   .cakes-catalog .cake-classic {
     background-image: url(../img/cake-classic--desktop.jpg);
@@ -541,15 +579,12 @@ img {
   }
   .cakes-catalog .cake-wedding {
     background-image: url(../img/cake-wedding--desktop.jpg);
-    margin-top: 260px;
   }
   .cakes-catalog .cake-male {
     background-image: url(../img/cake-male--desktop.jpg);
-    margin-left: 0;
   }
   .cakes-catalog .cake-woman {
     background-image: url(../img/cake-woman--desktop.jpg);
-    margin-left: 0;
   }
   .cakes-catalog .cake-child {
     background-image: url(../img/cake-child--desktop.jpg);
@@ -557,36 +592,26 @@ img {
 }
 .cakes-special {
   display: block;
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .cakes-special h3 {
-  font-family: "Playfair Display";
-  font-size: 24px;
-  font-weight: bold;
   text-align: center;
-  margin: 0 auto;
-  width: auto;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .cakes-special span {
-  font-family: "Intro ScriptR H2 Base";
-  font-size: 20px;
-  font-style: italic;
   text-align: center;
-  margin: 0 auto;
-  width: auto;
   display: block;
+  line-height: 22px;
 }
 @media (min-width: 768px) {
   .cakes-special {
-    padding-top: 60px;
+    padding-top: 30px;
   }
   .cakes-special h3 {
-    font-size: 28px;
-    padding-bottom: 18px;
+    line-height: 28px;
+    margin-bottom: 10px;
   }
   .cakes-special span {
-    font-size: 26px;
     padding-bottom: 35px;
   }
 }
@@ -595,11 +620,9 @@ img {
     padding-top: 100px;
   }
   .cakes-special h3 {
-    font-size: 40px;
     padding-bottom: 30px;
   }
   .cakes-special span {
-    font-size: 35px;
     padding-bottom: 50px;
   }
 }
@@ -619,7 +642,8 @@ img {
   flex-wrap: nowrap;
   width: 100%;
 }
-.cakes-special__filling .filling__number .number-of-filling {
+.cakes-special__filling .filling__number .number-of-filling,
+.cakes-special__filling .filling__number .choise-of-filling {
   font-family: "Playfair Display";
   font-weight: bold;
   font-size: 30px;
@@ -629,28 +653,25 @@ img {
   margin: 0;
 }
 .cakes-special__filling .filling__number .choise-of-filling {
-  font-family: "Playfair Display";
-  font-weight: bold;
   font-size: 18px;
-  color: #f40049;
-  vertical-align: middle;
   padding: 3px 0 20px 12px;
-  margin: 0;
 }
 .cakes-special__filling .filling__chocolate {
-  display: block;
+  display: flex;
   position: relative;
+  margin: 0 auto;
 }
 .cakes-special__filling .filling__chocolate img {
   width: 100%;
-  padding: 0 20px 0 20px;
+  padding: 0;
+  margin: 0 auto;
 }
 .cakes-special__filling .filling__chocolate p {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: -5px;
   color: white;
-  font-size: 20px;
+  font-size: 12px;
 }
 .cakes-special__filling .filling__radiobuttons {
   display: block;
@@ -662,20 +683,17 @@ img {
   width: 100%;
 }
 .cakes-special__filling .filling__descriptions .description__title {
-  font-family: "Circle";
-  font-size: 13px;
+  font-size: 16px;
+  line-height: 16px;
   font-weight: bold;
   text-align: left;
-  margin-left: 0;
-  font-style: normal;
 }
 .cakes-special__filling .filling__descriptions .filling__description-ganash {
   width: 280px;
-  font-size: 13px;
 }
 .cakes-special__filling .filling__descriptions .filling__price {
   font-family: "Playfair Display";
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   text-align: center;
   margin-left: 0;
@@ -700,7 +718,7 @@ img {
   .cakes-special__filling .filling__number .number-of-filling {
     font-size: 36px;
     vertical-align: middle;
-    padding: 0 0 20px 0;
+    padding: 0 0 5px 0;
     margin: 0;
     width: 90%;
   }
@@ -717,14 +735,10 @@ img {
   }
   .cakes-special__filling .filling__chocolate img {
     width: 100%;
-    padding: 0 20px 0 20px;
+    padding: 0 20px;
   }
   .cakes-special__filling .filling__chocolate p {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    color: white;
-    font-size: 20px;
+    display: none;
   }
   .cakes-special__filling .filling__radiobuttons {
     display: none;
@@ -745,78 +759,54 @@ img {
     margin-top: -10px;
   }
   .cakes-special__filling .filling__descriptions .filling__price {
-    font-family: "Playfair Display";
     font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-left: 0;
-    font-style: normal;
+    text-align: left;
     padding-bottom: 10px;
   }
   .cakes-special__filling .filling__descriptions .description-btn {
-    margin: 0 auto;
+    margin-left: 0;
     padding: 15px 45px;
   }
 }
 @media (min-width: 1200px) {
   .cakes-special__filling {
-    padding-top: 60px;
     max-width: 2500px;
     margin-bottom: 20px;
   }
   .cakes-special__filling .filling__number {
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100px;
     padding: 0px 80px 40px 40px;
   }
   .cakes-special__filling .filling__number .number-of-filling {
     font-size: 60px;
-    vertical-align: middle;
     padding: 0 0 20px 0;
-    margin: 0;
-    width: 90%;
   }
   .cakes-special__filling .filling__number .choise-of-filling {
     font-size: 27px;
     line-height: 30px;
-    vertical-align: middle;
     padding: 3px 0 0px 0px;
-    margin: 0;
-    width: 90%;
   }
   .cakes-special__filling .filling__chocolate img {
-    width: 100%;
     margin: 20px;
-    padding: 0 0px 0 20px;
+    padding: 0 0 0 20px;
   }
   .cakes-special__filling .filling__descriptions {
-    padding-left: 40px;
     width: 300px;
     padding-top: 60px;
   }
   .cakes-special__filling .filling__descriptions .description__title {
     font-size: 20px;
-    margin-left: 0;
-    font-style: normal;
-    padding-top: 25px;
   }
   .cakes-special__filling .filling__descriptions .filling__description-ganash {
     width: 310px;
     font-size: 18px;
     line-height: 24px;
-    margin-top: -10px;
   }
   .cakes-special__filling .filling__descriptions .filling__price {
     font-size: 22px;
-    text-align: left;
-    margin-left: 0;
-    font-style: normal;
     padding-bottom: 50px;
   }
   .cakes-special__filling .filling__descriptions .description-btn {
-    margin-left: 0;
-    padding: 15px 45px;
+    padding: 15px 60px;
   }
 }
 .cakes-special__size {
@@ -835,7 +825,8 @@ img {
   flex-wrap: nowrap;
   width: 100%;
 }
-.cakes-special__size .size__number .number-of-size {
+.cakes-special__size .size__number .number-of-size,
+.cakes-special__size .size__number .choise-of-size {
   font-family: "Playfair Display";
   font-weight: bold;
   font-size: 30px;
@@ -845,13 +836,8 @@ img {
   margin: 0;
 }
 .cakes-special__size .size__number .choise-of-size {
-  font-family: "Playfair Display";
-  font-weight: bold;
   font-size: 18px;
-  color: #f40049;
-  vertical-align: middle;
   padding: 3px 0 20px 12px;
-  margin: 0;
 }
 .cakes-special__size .size__characteristics {
   width: 100%;
@@ -865,22 +851,16 @@ img {
   border: 3px black dotted;
   text-align: center;
   vertical-align: middle;
-  font-size: 14px;
-  font-family: "Circle";
   padding-top: 40px;
   margin: 0 auto;
   margin-bottom: 30px;
 }
 .cakes-special__size .characteristics__radius-of-cake {
-  font-size: 14px;
-  font-family: "Circle";
   text-align: center;
   margin: 0;
 }
 .cakes-special__size .characteristics__number-of-person {
   display: block;
-  font-size: 14px;
-  font-family: "Circle";
   text-align: center;
   margin: 0;
   margin-bottom: 60px;
@@ -914,16 +894,14 @@ img {
   }
   .cakes-special__size .size__number .number-of-size {
     font-size: 36px;
-    vertical-align: middle;
-    padding: 0 0 20px 0;
     margin: 0;
     width: 90%;
+    margin-bottom: -10px;
   }
   .cakes-special__size .size__number .choise-of-size {
     font-size: 18px;
     vertical-align: middle;
-    padding: 3px 0 20px 0px;
-    margin: 0;
+    padding: 0 0 20px 0;
     width: 90%;
   }
   .cakes-special__size .characteristics__number-of-person {
@@ -943,14 +921,14 @@ img {
   .cakes-special__size .size__characteristics .kg2 {
     display: block;
     width: 100px;
-    height: 60px;
-    padding-top: 40px;
+    height: 62px;
+    padding-top: 38px;
   }
   .cakes-special__size .size__characteristics .kg5 {
     display: block;
     width: 115px;
-    height: 65px;
-    padding-top: 50px;
+    height: 70px;
+    padding-top: 45px;
     position: relative;
   }
   .cakes-special__size .size__characteristics .kg5::before {
@@ -966,8 +944,8 @@ img {
   .cakes-special__size .size__characteristics .kg8 {
     display: block;
     width: 135px;
-    height: 75px;
-    padding-top: 60px;
+    height: 80px;
+    padding-top: 55px;
     position: relative;
   }
   .cakes-special__size .size__characteristics .kg8::before {
@@ -1003,25 +981,18 @@ img {
     max-width: 2500px;
   }
   .cakes-special__size .size__number {
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100px;
-    padding: 0px 80px 40px 40px;
+    padding: 0 80px 40px 40px;
   }
   .cakes-special__size .size__number .number-of-size {
     font-size: 60px;
     vertical-align: middle;
     padding: 0 0 20px 0;
-    margin: 0;
     width: 90%;
   }
   .cakes-special__size .size__number .choise-of-size {
     font-size: 27px;
     line-height: 30px;
-    vertical-align: middle;
-    padding: 3px 0 0px 0px;
-    margin: 0;
-    width: 90%;
+    padding: 3px 0 0 0;
   }
 }
 .cakes-special__design {
@@ -1039,7 +1010,8 @@ img {
   flex-wrap: nowrap;
   width: 100%;
 }
-.cakes-special__design .design__number .number-of-design {
+.cakes-special__design .design__number .number-of-design,
+.cakes-special__design .design__number .choise-of-design {
   font-family: "Playfair Display";
   font-weight: bold;
   font-size: 30px;
@@ -1049,13 +1021,8 @@ img {
   margin: 0;
 }
 .cakes-special__design .design__number .choise-of-design {
-  font-family: "Playfair Display";
-  font-weight: bold;
   font-size: 18px;
-  color: #f40049;
-  vertical-align: middle;
   padding: 3px 0 20px 12px;
-  margin: 0;
 }
 .cakes-special__design .card__berry-assorted,
 .cakes-special__design .card__marshmallow {
@@ -1068,17 +1035,11 @@ img {
 .cakes-special__design .card__marshmallow img {
   display: block;
   width: 100%;
-  padding: 0 20px 0 20px;
+  padding: 0 20px;
   margin: 0 auto;
 }
 .cakes-special__design .card__berry-assorted .description__title,
 .cakes-special__design .card__marshmallow .description__title {
-  font-family: "Circle";
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  font-style: normal;
-  color: black;
   margin: 0 auto;
   padding-bottom: 10px;
 }
@@ -1087,7 +1048,6 @@ img {
   font-family: "Playfair Display";
   font-size: 18px;
   font-weight: bold;
-  text-align: center;
   font-style: normal;
   padding-bottom: 10px;
   color: black;
@@ -1125,15 +1085,13 @@ img {
   }
   .cakes-special__design .design__number .number-of-design {
     font-size: 36px;
-    vertical-align: middle;
-    padding: 0 0 20px 0;
+    padding: 0;
     margin: 0;
     width: 90%;
   }
   .cakes-special__design .design__number .choise-of-design {
     font-size: 18px;
-    vertical-align: middle;
-    padding: 3px 0 20px 0px;
+    padding: 10px 0 20px 0;
     margin: 0;
     width: 90%;
   }
@@ -1156,29 +1114,24 @@ img {
 }
 @media (min-width: 1200px) {
   .cakes-special__design {
-    padding-top: 60px;
     max-width: 2500px;
   }
   .cakes-special__design .design__number {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100px;
-    padding: 0px 80px 40px 40px;
+    padding: 0 80px 40px 40px;
   }
   .cakes-special__design .design__number .number-of-design {
     font-size: 60px;
     vertical-align: middle;
     padding: 0 0 20px 0;
-    margin: 0;
-    width: 90%;
   }
   .cakes-special__design .design__number .choise-of-design {
     font-size: 27px;
     line-height: 30px;
     vertical-align: middle;
-    padding: 3px 0 0px 0px;
-    margin: 0;
-    width: 90%;
+    padding: 3px 0 0 0;
   }
   .cakes-special__design .design__emblem {
     display: flex;
@@ -1194,8 +1147,6 @@ img {
   .cakes-special__design .description__title {
     display: block;
     font-size: 24px;
-    font-family: "Circle";
-    font-weight: bold;
     font-style: normal;
     padding: 0;
     margin: 0 auto;
@@ -1203,9 +1154,6 @@ img {
   .cakes-special__design .card__price {
     display: block;
     font-size: 28px;
-    font-family: "Playfair Display";
-    font-weight: bold;
-    font-style: normal;
     margin-top: -20px;
   }
   .cakes-special__design .design__berry-assorted,
@@ -1217,12 +1165,12 @@ img {
   display: flex;
   justify-content: column;
   flex-wrap: wrap;
-  background-color: #fff;
   padding: 20px;
+  margin: 0 auto;
   width: 100%;
   max-width: 400px;
-  margin: 0 auto;
   max-height: 400px;
+  background-color: #fff;
 }
 .cakes-special__choise h3 {
   margin-left: 0;
@@ -1234,17 +1182,16 @@ img {
   margin: 0 auto;
 }
 .cakes-special__choise .choise__parameters .choise__parameter label {
-  font-family: "Intro ScriptR H2 Base";
-  font-size: 20px;
-  font-style: italic;
   display: block;
+  font-family: "Intro Script";
+  font-size: 20px;
   color: #f50049;
   margin: 10px auto;
   text-align: center;
 }
 .cakes-special__choise .choise__parameters .choise__parameter input {
   font-size: 14px;
-  padding: 8px 0 8px 0;
+  padding: 8px 0;
   min-width: 230px;
   margin: 0 auto;
   border-radius: 22px;
@@ -1254,7 +1201,8 @@ img {
 .cakes-special__choise .choise__parameters .btn-form-choise {
   margin: 30px auto;
 }
-.cakes-special__choise .number-of-size {
+.cakes-special__choise .number-of-size,
+.cakes-special__choise .choise-of-size {
   font-family: "Playfair Display";
   font-weight: bold;
   font-size: 30px;
@@ -1264,13 +1212,8 @@ img {
   margin: 0;
 }
 .cakes-special__choise .choise-of-size {
-  font-family: "Playfair Display";
-  font-weight: bold;
   font-size: 18px;
-  color: #f40049;
-  vertical-align: middle;
   padding: 3px 0 20px 12px;
-  margin: 0;
 }
 .cakes-special__choise .choise__img-left,
 .cakes-special__choise .choise__img-right {
@@ -1288,7 +1231,7 @@ img {
     padding: 20px 0;
   }
   .cakes-special__choise h3 {
-    font-size: 24px;
+    font-size: 27px;
     margin: 20px 0 0 20px;
   }
   .cakes-special__choise .choise__parameters {
@@ -1303,21 +1246,11 @@ img {
     margin-left: 23px;
   }
   .cakes-special__choise .choise__parameters .choise__parameter label {
-    font-family: "Intro ScriptR H2 Base";
-    font-size: 20px;
-    font-style: italic;
-    display: block;
-    color: #f50049;
-    margin: 10px auto;
     text-align: left;
   }
   .cakes-special__choise .choise__parameters .choise__parameter input {
-    display: block;
-    font-size: 14px;
     padding: 8px 25px;
-    border: 1px #dddddd solid;
-    text-align: center;
-    min-width: 0px;
+    min-width: 0;
   }
   .cakes-special__choise .choise__parameters .parameter__filling input {
     width: 130px;
@@ -1338,15 +1271,7 @@ img {
     padding: 0px;
   }
   .cakes-special__choise h3 {
-    font-size: 24px;
     margin: 20px 0 0 60px;
-  }
-  .cakes-special__choise .choise__parameters {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 0;
-    margin-right: 50px;
   }
   .cakes-special__choise .choise__parameters .choise__parameter {
     display: inline-block;
@@ -1355,7 +1280,6 @@ img {
   .cakes-special__choise .choise__parameters .choise__parameter label {
     font-size: 27px;
     margin: 10px auto;
-    text-align: left;
   }
   .cakes-special__choise .choise__parameters .choise__parameter input {
     font-size: 18px;
@@ -1387,19 +1311,15 @@ img {
   flex-wrap: wrap;
   padding: 20px 0;
   width: 100%;
-  max-width: 440px;
   margin: 0 auto;
   max-height: 300px;
+  max-width: 440px;
 }
 .cakes-comments h3 {
   margin: 20px auto;
   text-align: center;
   padding-bottom: 20px;
   width: 100%;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
-  font-family: "Playfair Display";
 }
 .cakes-comments .comments {
   display: flex;
@@ -1409,21 +1329,20 @@ img {
 .cakes-comments .comments img {
   display: block;
   margin: 0 auto;
-  border-radius: 30px;
+  border-radius: 50%;
 }
 .cakes-comments .comments .comments__name {
   margin: 0 auto;
   font-size: 13px;
   font-weight: bold;
   text-align: center;
-  font-family: "Circle";
 }
 .cakes-comments .comments .comments__profession-age {
-  margin: 0 auto 10px auto;
+  margin: 0 auto;
   font-size: 13px;
-  font-weight: normal;
   text-align: center;
-  font-family: "Circle";
+  line-height: 13px;
+  margin-bottom: 13px;
 }
 .cakes-comments .comments .comments__text {
   margin: 0 20px;
@@ -1435,39 +1354,25 @@ img {
   bottom: -20px;
   right: 0;
   font-size: 13px;
-  font-family: "Circle";
   color: #f74679;
 }
 @media (min-width: 768px) {
   .cakes-comments {
     justify-content: row;
-    padding: 20px 0;
-    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    max-height: 300px;
   }
   .cakes-comments h3 {
     margin: 35px auto;
-    padding-bottom: 20px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: "Playfair Display";
   }
   .cakes-comments .comments {
-    display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    position: relative;
     margin: 0 auto;
   }
   .cakes-comments .comments img {
-    display: block;
     width: 109px;
     height: 108px;
     margin: 25px 0 0 0;
-    border-radius: 55px;
   }
   .cakes-comments .comments .comments__about {
     display: flex;
@@ -1477,9 +1382,7 @@ img {
   .cakes-comments .comments .comments__about .comments__name {
     font-size: 16px;
   }
-  .cakes-comments .comments .comments__about .comments__profession-age {
-    font-size: 14px;
-  }
+  .cakes-comments .comments .comments__about .comments__profession-age,
   .cakes-comments .comments .comments__about .comments__text {
     font-size: 14px;
   }
@@ -1497,17 +1400,13 @@ img {
   }
   .cakes-comments h3 {
     margin: 70px auto;
-    font-size: 40px;
   }
   .cakes-comments .comments img {
     width: 209px;
     height: 209px;
     margin: 25px 0 0 0;
-    border-radius: 105px;
   }
   .cakes-comments .comments .comments__about {
-    display: flex;
-    flex-direction: column;
     width: 370px;
     margin-left: 50px;
   }
@@ -1535,7 +1434,6 @@ img {
   justify-content: column;
   flex-wrap: wrap;
   padding: 20px;
-  width: 100%;
   max-width: 400px;
   margin: 0 auto;
   max-height: 720px;
@@ -1545,9 +1443,6 @@ img {
   text-align: center;
   padding-bottom: 20px;
   width: 100%;
-  font-size: 24px;
-  font-weight: bold;
-  font-family: "Playfair Display";
 }
 .cakes-about-us .cakes-about-us__photo,
 .cakes-about-us .cakes-about-us__links-bar,
@@ -1563,7 +1458,7 @@ img {
 .cakes-about-us .cakes-about-us__links-bar img,
 .cakes-about-us .links-bar__information img {
   margin-right: 35px;
-  border-radius: 78px;
+  border-radius: 50%;
 }
 .cakes-about-us .cakes-about-us__photo ul,
 .cakes-about-us .cakes-about-us__links-bar ul,
@@ -1571,12 +1466,13 @@ img {
   list-style-type: none;
   width: 50px;
   display: flex;
-  justify-content: space-around;
   flex-direction: column;
 }
 .cakes-about-us .cakes-about-us__photo ul li,
 .cakes-about-us .cakes-about-us__links-bar ul li,
 .cakes-about-us .links-bar__information ul li {
+  display: flex;
+  justify-content: space-around;
   width: 37px;
   height: 37px;
   border-radius: 19px;
@@ -1608,23 +1504,16 @@ img {
   display: none;
 }
 .cakes-about-us .cakes-about-us__information .information__personality {
-  font-family: "Intro ScriptR H2 Base";
-  font-size: 22px;
-  font-style: Italic;
   margin: 14px 0;
 }
 .cakes-about-us .cakes-about-us__information .information__cakes-as-calling-title,
 .cakes-about-us .cakes-about-us__information .information__natural-title {
-  font-family: "Circle";
-  font-size: 14px;
   font-weight: bold;
   margin: 14px 0;
 }
 .cakes-about-us .cakes-about-us__information .information__cakes-as-calling-text,
 .cakes-about-us .cakes-about-us__information .information__natural-text {
-  font-family: "Circle";
-  font-size: 14px;
-  font-weight: normal;
+  line-height: 16px;
 }
 .cakes-about-us .cakes__quote img {
   display: block;
@@ -1634,7 +1523,7 @@ img {
   margin: 15px auto;
   font-family: "Playfair Display";
   font-size: 13px;
-  font-style: Italic;
+  font-style: italic;
   text-align: center;
 }
 .cakes-about-us .cakes__quote .quote__signature {
@@ -1643,14 +1532,12 @@ img {
 @media (min-width: 768px) {
   .cakes-about-us {
     justify-content: row;
-    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     max-height: 720px;
     padding-top: 100px;
   }
   .cakes-about-us h3 {
-    margin: 40px 0 0 40px;
+    margin: 40px 0 0 0;
     text-align: left;
     padding-bottom: 20px;
     font-size: 28px;
@@ -1667,7 +1554,6 @@ img {
   }
   .cakes-about-us .cakes-about-us__photo img {
     margin-right: 0px;
-    border-radius: 156px;
     width: 313px;
     height: 311px;
   }
@@ -1677,7 +1563,6 @@ img {
   .cakes-about-us .cakes-about-us__information {
     width: 40%;
     order: 1;
-    padding-left: 40px;
     padding-top: 10px;
   }
   .cakes-about-us .cakes-about-us__information .information__title {
@@ -1685,23 +1570,11 @@ img {
     margin: 0;
     text-align: left;
     padding-bottom: 20px;
-    font-size: 28px;
-  }
-  .cakes-about-us .cakes-about-us__information .information__personality {
-    font-size: 26px;
   }
   .cakes-about-us .cakes-about-us__information .information__cakes-as-calling-title,
   .cakes-about-us .cakes-about-us__information .information__natural-title {
-    font-family: "Circle";
     font-size: 15px;
-    font-weight: bold;
     margin: 14px 0;
-  }
-  .cakes-about-us .cakes-about-us__information .information__cakes-as-calling-text,
-  .cakes-about-us .cakes-about-us__information .information__natural-text {
-    font-family: "Circle";
-    font-size: 14px;
-    font-weight: normal;
   }
   .cakes-about-us .cakes-about-us__information .links-bar__information {
     display: flex;
@@ -1753,14 +1626,10 @@ img {
   .cakes-about-us .cakes-about-us__photo img {
     width: 510px;
     height: 510px;
-    border-radius: 255px;
-  }
-  .cakes-about-us .cakes-about-us__information {
-    width: 40%;
   }
   .cakes-about-us .cakes-about-us__information .information__title {
-    font-size: 40px;
     padding-bottom: 35px;
+    font-size: 40px;
   }
   .cakes-about-us .cakes-about-us__information .information__personality {
     font-size: 25px;
@@ -1798,33 +1667,24 @@ img {
 .cakes__our-advantage {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 0;
-  width: 100%;
   max-width: 420px;
   margin: 0 auto;
   max-height: 410px;
 }
 .cakes__our-advantage .our-advantage__title {
   margin: 0 auto;
+  display: block;
+  width: 100%;
 }
 .cakes__our-advantage .our-advantage__title h3 {
   display: block;
-  font-size: 24px;
   line-height: 33px;
   margin: 0 auto;
-  font-family: "Playfair Display";
-  font-weight: bold;
-  font-style: normal;
-  padding: 15px 0;
   text-align: center;
+  padding-top: 50px;
 }
 .cakes__our-advantage .our-advantage__title span {
   display: block;
-  font-size: 22px;
-  font-family: "Intro ScriptR H2 Base";
-  font-weight: normal;
-  font-style: italic;
-  margin: 0px auto;
   padding-bottom: 15px;
   text-align: center;
 }
@@ -1835,16 +1695,12 @@ img {
 .cakes__our-advantage .advantage-card__natural-title,
 .cakes__our-advantage .advantage-card__fresh-title {
   font-size: 16px;
-  font-family: "Circle";
   font-weight: bold;
   text-align: center;
-  margin-bottom: -10px;
+  margin-bottom: -20px;
 }
 .cakes__our-advantage .advantage-card__natural-text,
 .cakes__our-advantage .advantage-card__fresh-text {
-  font-size: 14px;
-  font-family: "Circle";
-  font-weight: normal;
   text-align: center;
   max-width: 380px;
 }
@@ -1856,9 +1712,7 @@ img {
 @media (min-width: 768px) {
   .cakes__our-advantage {
     justify-content: flex-end;
-    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
     max-height: 610px;
     position: relative;
   }
@@ -1873,14 +1727,7 @@ img {
     height: 310px;
   }
   .cakes__our-advantage .our-advantage__title {
-    margin: 0 auto;
     width: 100%;
-  }
-  .cakes__our-advantage .our-advantage__title h3 {
-    font-size: 28px;
-  }
-  .cakes__our-advantage .our-advantage__title span {
-    font-size: 26px;
   }
   .cakes__our-advantage .our-advantage__list {
     width: 265px;
@@ -1900,39 +1747,37 @@ img {
   .cakes__our-advantage .advantage-card__natural-title,
   .cakes__our-advantage .advantage-card__fresh-title {
     text-align: left;
+    margin-bottom: -7px;
   }
   .cakes__our-advantage .advantage-card__natural-text,
   .cakes__our-advantage .advantage-card__fresh-text {
     text-align: left;
+    line-height: 18px;
   }
 }
 @media (min-width: 1200px) {
   .cakes__our-advantage {
-    width: 100%;
     max-width: 4000px;
     margin: 0 auto;
     max-height: 410px;
-    position: relative;
     justify-content: space-around;
-    max-height: 700px;
+    max-height: 780px;
   }
   .cakes__our-advantage .our-advantage__title {
     margin: 0 auto;
   }
   .cakes__our-advantage .our-advantage__title h3 {
-    font-size: 40px;
     line-height: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 10px;
   }
   .cakes__our-advantage .our-advantage__title span {
-    font-size: 35px;
-    padding-bottom: 120px;
+    padding-bottom: 10px;
   }
   .cakes__our-advantage .our-advantage__img {
     display: block;
     position: absolute;
     left: 0px;
-    top: 120px;
+    top: 130px;
     z-index: 2;
   }
   .cakes__our-advantage .our-advantage__img img {
@@ -1942,6 +1787,7 @@ img {
   .cakes__our-advantage .our-advantage__list {
     margin-left: 420px;
     width: 380px;
+    height: 380px;
   }
   .cakes__our-advantage .our-advantage__list .advantage-card {
     margin-top: 35px;
@@ -1963,38 +1809,28 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  width: 100%;
   max-width: 400px;
   margin: 0 auto;
   max-height: 650px;
 }
 .cakes-for-clients h3 {
   display: block;
-  font-size: 24px;
   line-height: 33px;
   margin: 0 auto;
-  font-family: "Playfair Display";
-  font-weight: bold;
-  font-style: normal;
-  padding: 15px 0;
+  padding-top: 10px;
   text-align: left;
+  padding-bottom: 10px;
 }
 .cakes-for-clients span {
   display: block;
-  font-size: 22px;
-  font-family: "Intro ScriptR H2 Base";
-  font-weight: normal;
-  font-style: italic;
-  margin: 0px auto;
-  padding-bottom: 15px;
+  margin: 0 auto;
+  padding-bottom: 0;
   text-align: left;
 }
 .cakes-for-clients p {
   display: block;
-  font-size: 14px;
   line-height: 18px;
-  font-family: "Circle";
-  margin: 0px auto;
+  margin: 0 auto;
   padding-bottom: 60px;
   text-align: left;
 }
@@ -2017,12 +1853,6 @@ img {
     width: 50%;
     margin: auto 0;
     margin-left: 48px;
-  }
-  .cakes-for-clients .cakes-for-clients__text h3 {
-    font-size: 28px;
-  }
-  .cakes-for-clients .cakes-for-clients__text span {
-    font-size: 26px;
   }
   .cakes-for-clients .cakes-for-clients__text p {
     padding-bottom: 60px;
@@ -2047,12 +1877,11 @@ img {
     margin-left: 74px;
   }
   .cakes-for-clients .cakes-for-clients__text h3 {
-    font-size: 40px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
+    margin-top: 220px;
   }
   .cakes-for-clients .cakes-for-clients__text span {
-    font-size: 35px;
-    padding-bottom: 25px;
+    padding-bottom: 0px;
   }
   .cakes-for-clients .cakes-for-clients__text p {
     padding-bottom: 60px;
@@ -2068,10 +1897,7 @@ img {
   display: flex;
   justify-content: column;
   flex-wrap: wrap;
-  padding: 0px;
-  width: 100%;
   margin: 0;
-  padding: 0;
   max-height: 583px;
   background: linear-gradient(to top, #d82934 0%, #e3353d 35%, #e3353d 100%);
   z-index: 2;
@@ -2081,7 +1907,7 @@ img {
   flex-direction: column;
   margin: 0 auto;
   margin-top: 32px;
-  padding: 0px;
+  padding: 0;
   max-width: 282px;
   color: white;
   height: 483px;
@@ -2091,12 +1917,8 @@ img {
 }
 .cakes-order .cakes-order__container h3 {
   display: block;
-  font-size: 24px;
   line-height: 33px;
   margin: 0 auto;
-  font-family: "Playfair Display";
-  font-weight: bold;
-  font-style: normal;
   text-align: left;
   padding-bottom: 32px;
 }
@@ -2108,7 +1930,7 @@ img {
 }
 .cakes-order .cakes-order__container .cakes-order__step .step__number {
   position: absolute;
-  top: 5px;
+  top: -25px;
   left: 0;
   font-size: 35px;
   font-family: "Playfair Display";
@@ -2120,13 +1942,13 @@ img {
   display: block;
   font-size: 15px;
   line-height: 18px;
-  font-family: "Circle";
   text-align: left;
   font-weight: bold;
   padding: 0;
 }
 .cakes-order .cakes-order__container .cakes-order__step .step__title {
-  line-height: 30px;
+  line-height: 20px;
+  margin-bottom: -10px;
 }
 .cakes-order .cakes-order__container .cakes-order__step .step__description {
   font-size: 14px;
@@ -2135,20 +1957,17 @@ img {
 @media (min-width: 768px) {
   .cakes-order {
     max-height: 583px;
+    background: red;
     background: url("../img/box-with-cake--tablet.jpg") no-repeat;
     background-size: cover;
   }
   .cakes-order .cakes-order__container {
     margin: 52px 60px 0 55%;
-    padding: 0px;
     max-width: 700px;
-    color: white;
     height: 483px;
-    z-index: 3;
     background: transparent;
   }
   .cakes-order .cakes-order__container h3 {
-    font-size: 28px;
     margin: 0;
     text-align: left;
     padding-bottom: 40px;
@@ -2167,27 +1986,19 @@ img {
     max-height: 1000px;
     min-height: 702px;
     background: url("../img/box-with-cake--desktop.jpg") no-repeat;
-    background-size: cover;
   }
   .cakes-order .cakes-order__container {
-    margin: 10% 60px 0 67%;
-    padding: 0px;
+    margin: 10% 0 0 740px;
     max-width: 690px;
-    color: white;
     height: 502px;
-    z-index: 3;
-    background: transparent;
   }
   .cakes-order .cakes-order__container h3 {
-    font-size: 40px;
-    margin: 0;
-    text-align: left;
     padding-bottom: 50px;
   }
   .cakes-order .cakes-order__container .cakes-order__step {
     padding-bottom: 15px;
-    max-height: 150px;
     padding-left: 45px;
+    max-width: 500px;
   }
   .cakes-order .cakes-order__container .cakes-order__step .step__number {
     left: 0;
@@ -2208,39 +2019,27 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  padding: 0px;
-  width: 100%;
   max-width: 400px;
   margin: 0 auto;
   max-height: 850px;
+  padding-top: 40px;
 }
 .cakes-contacts h3 {
   display: block;
-  font-size: 24px;
-  line-height: 33px;
+  line-height: 36px;
   margin: 0 auto;
-  font-family: "Playfair Display";
-  font-weight: bold;
-  font-style: normal;
-  padding: 15px 0;
-  text-align: left;
+  padding-bottom: 5px;
+  text-align: center;
 }
 .cakes-contacts span {
   display: block;
-  font-size: 22px;
-  font-family: "Intro ScriptR H2 Base";
-  font-weight: normal;
-  font-style: italic;
-  margin: 0px auto;
-  padding-bottom: 15px;
+  margin: 0 auto;
   text-align: left;
 }
 .cakes-contacts p {
   display: block;
-  font-size: 14px;
   line-height: 18px;
-  font-family: "Circle";
-  margin: 0px auto;
+  margin: 0 auto;
   padding-bottom: 10px;
   text-align: left;
 }
@@ -2248,7 +2047,7 @@ img {
   width: 100%;
   min-height: 52px;
   margin-bottom: 10px;
-  border: 0px green solid;
+  border: 0 green solid;
   border-radius: 2px;
   padding-left: 10px;
   font-size: 14px;
@@ -2329,7 +2128,7 @@ img {
     flex-direction: row;
     justify-content: space-between;
     max-width: 1200px;
-    margin-top: 48px;
+    margin-top: 28px;
     max-height: 1250px;
   }
   .cakes-contacts .cakes-contacts__title {
@@ -2337,12 +2136,15 @@ img {
     margin-bottom: 23px;
   }
   .cakes-contacts .cakes-contacts__title h3 {
+    text-align: left;
     margin-left: 48px;
-    font-size: 28px;
+    padding-bottom: 0;
+    line-height: 28px;
   }
   .cakes-contacts .cakes-contacts__title span {
     margin-left: 48px;
-    font-size: 22px;
+    margin-top: -15px;
+    margin-bottom: -5px;
   }
   .cakes-contacts form {
     width: 40%;
@@ -2366,11 +2168,12 @@ img {
   }
   .cakes-contacts .cakes-contacts__title h3 {
     margin-left: 74px;
-    font-size: 40px;
+    padding-bottom: 40px;
   }
   .cakes-contacts .cakes-contacts__title span {
     margin-left: 74px;
     font-size: 35px;
+    padding-bottom: 0;
   }
   .cakes-contacts form {
     width: 45%;
@@ -2381,7 +2184,7 @@ img {
   }
   .cakes-contacts form input[type="text"],
   .cakes-contacts form textarea {
-    border: 0px green solid;
+    border: 0 green solid;
     border-bottom: 1px #c9bcbb solid;
     border-radius: 0;
     background: #fbebea;
@@ -2417,7 +2220,6 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding: 30px 0 0 0;
-  width: 100%;
   max-height: 850px;
   color: white;
   background-color: #898989;
@@ -2462,8 +2264,12 @@ img {
 .footer .footer-wrapper .footer__copyright {
   color: #b3b3b3;
   font-size: 12px;
-  font-family: "Circle";
   border-top: 1px #b3b3b3 solid;
+}
+@media (max-width: 767px) {
+  .social-links-wrapper-2 {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .footer {
@@ -2526,14 +2332,12 @@ img {
     order: 1;
     color: #b3b3b3;
     font-size: 12px;
-    font-family: "Circle";
     vertical-align: middle;
     margin-left: 30%;
   }
 }
 @media (min-width: 1200px) {
   .footer {
-    width: 100%;
     color: black;
     background-color: #e8e8e8;
   }

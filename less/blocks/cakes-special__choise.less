@@ -2,12 +2,12 @@
 	display: flex;
 	justify-content: column;
 	flex-wrap: wrap;
-	background-color: #fff;
 	padding: 20px;
+	margin: 0 auto;
 	width: 100%;
 	max-width: 400px;
-	margin: 0 auto;
 	max-height: 400px;
+	background-color: #fff;
 	
 	h3 {
 		margin-left: 0;
@@ -23,10 +23,8 @@
 
 			label {
 				display: block;
-				font-family: "Intro ScriptR H2 Base";
+				font-family: "Intro Script";
 				font-size: 20px;
-				font-style: italic;
-				display: block;
 				color: #f50049;
 				margin: 10px auto;
 				text-align: center;
@@ -34,7 +32,7 @@
 
 			input {
 				font-size: 14px;
-				padding: 8px 0 8px 0; 
+				padding: 8px 0; 
 				min-width: 230px;
 				margin: 0 auto;
 				border-radius: 22px;
@@ -48,7 +46,8 @@
 		}
 	}
 
-	.number-of-size {
+	.number-of-size,
+	.choise-of-size {
 		font-family: "Playfair Display";
 		font-weight: bold;
 		font-size: 30px;
@@ -59,13 +58,8 @@
 	}
 
 	.choise-of-size {
-		font-family: "Playfair Display";
-		font-weight: bold;
 		font-size: 18px;
-		color: #f40049;
-		vertical-align: middle;
 		padding: 3px 0 20px 12px;
-		margin: 0;
 	}
 
 	.choise__img-left,
@@ -89,7 +83,7 @@
 		padding: 20px 0;
 
 		h3 {
-			font-size: 24px;
+			font-size: 27px;
 			margin: 20px 0 0 20px;
 		}
 
@@ -105,24 +99,12 @@
 				margin-left: 23px;
 				
 				label {
-					display: block;
-					font-family: "Intro ScriptR H2 Base";
-					font-size: 20px;
-					font-style: italic;
-					display: block;
-					color: #f50049;
-					margin: 10px auto;
 					text-align: left;
 				}
 
 				input {
-					display: block;
-					font-size: 14px;
 					padding: 8px 25px; 
-					min-width: 0px;
-					border: 1px #dddddd solid;
-					text-align: center;
-					min-width: 0px;
+					min-width: 0;
 				}
 			}
 			
@@ -161,16 +143,10 @@
 		padding: 0px;
 
 		h3 {
-			font-size: 24px;
 			margin: 20px 0 0 60px;
 		}
 
 		.choise__parameters {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			margin-left: 0;
-			margin-right: 50px;
 
 			.choise__parameter {
 				display: inline-block;
@@ -179,7 +155,6 @@
 				label {
 					font-size: 27px;
 					margin: 10px auto;
-					text-align: left;
 				}
 
 				input {

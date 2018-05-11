@@ -13,7 +13,8 @@
 		flex-wrap: nowrap;
 		width: 100%;
 
-		.number-of-design {
+		.number-of-design,
+		.choise-of-design {
 			font-family: "Playfair Display";
 			font-weight: bold;
 			font-size: 30px;
@@ -24,13 +25,8 @@
 		}
 
 		.choise-of-design {
-			font-family: "Playfair Display";
-			font-weight: bold;
 			font-size: 18px;
-			color: #f40049;
-			vertical-align: middle;
 			padding: 3px 0 20px 12px;
-			margin: 0;
 		}
 	}
 
@@ -44,17 +40,11 @@
 		img {
 			display: block;
 			width: 100%;
-			padding: 0 20px 0 20px;
+			padding: 0 20px;
 			margin: 0 auto;		
 		}
 
 		.description__title {
-			font-family: "Circle";
-			font-size: 14px;
-			font-weight: bold;
-			text-align: center; 
-			font-style: normal;
-			color: black;
 			margin: 0 auto;
 			padding-bottom: 10px;
 		}
@@ -63,7 +53,6 @@
 			font-family: "Playfair Display";
 			font-size: 18px;
 			font-weight: bold;
-			text-align: center;
 			font-style: normal;
 			padding-bottom: 10px;
 			color: black;
@@ -112,16 +101,14 @@
 
 			.number-of-design {
 				font-size: 36px;
-				vertical-align: middle;
-				padding: 0 0 20px 0;
+				padding: 0;
 				margin: 0;
 				width: 90%;
 			}
 
 			.choise-of-design {
 				font-size: 18px;
-				vertical-align: middle;
-				padding: 3px 0 20px 0px;
+				padding: 10px 0 20px 0;
 				margin: 0;
 				width: 90%;
 			}
@@ -152,30 +139,25 @@
 @media @desktop-widths {
 
 	.cakes-special__design {
-		padding-top: 60px;
 		max-width: 2500px;
 	
 		.design__number {
 			flex-direction: column;
 			flex-wrap: wrap;
 			width: 100px;
-			padding: 0px 80px 40px 40px;
+			padding: 0 80px 40px 40px;
 
 			.number-of-design {
 				font-size: 60px;
 				vertical-align: middle;
 				padding: 0 0 20px 0;
-				margin: 0;
-				width: 90%;
 			}
 
 			.choise-of-design {
 				font-size: 27px;
 				line-height: 30px;
 				vertical-align: middle;
-				padding: 3px 0 0px 0px;
-				margin: 0;
-				width: 90%;
+				padding: 3px 0 0 0;
 			}
 		}
 
@@ -195,8 +177,6 @@
 		.description__title {
 			display: block;
 			font-size: 24px;
-			font-family: "Circle";
-			font-weight: bold;
 			font-style: normal;
 			padding: 0;
 			margin: 0 auto;
@@ -205,9 +185,6 @@
 		.card__price {
 			display: block;
 			font-size: 28px;
-			font-family: "Playfair Display";
-			font-weight: bold;
-			font-style: normal;
 			margin-top: -20px;
 		}
 

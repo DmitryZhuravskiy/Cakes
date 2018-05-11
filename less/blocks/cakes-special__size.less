@@ -14,7 +14,8 @@
 		flex-wrap: nowrap;
 		width: 100%;
 
-		.number-of-size {
+		.number-of-size,
+		.choise-of-size {
 			font-family: "Playfair Display";
 			font-weight: bold;
 			font-size: 30px;
@@ -25,20 +26,14 @@
 		}
 
 		.choise-of-size {
-			font-family: "Playfair Display";
-			font-weight: bold;
 			font-size: 18px;
-			color: #f40049;
-			vertical-align: middle;
 			padding: 3px 0 20px 12px;
-			margin: 0;
 		}
 	}
 
 	.size__characteristics {
 		width: 100%;
 		margin: 0 auto;
-
 	}
 
 	.characteristics__weight {
@@ -49,24 +44,18 @@
 		border: 3px black dotted;
 		text-align: center;
 		vertical-align: middle;
-		font-size: 14px;
-		font-family: "Circle";
 		padding-top: 40px;
 		margin: 0 auto;
 		margin-bottom: 30px;
 	}
 
 	.characteristics__radius-of-cake {
-		font-size: 14px;
-		font-family: "Circle";
 		text-align: center;
 		margin: 0;
 	}
 
 	.characteristics__number-of-person {
 		display: block;
-		font-size: 14px;
-		font-family: "Circle";
 		text-align: center;
 		margin: 0;
 		margin-bottom: 60px;
@@ -106,17 +95,15 @@
 
 			.number-of-size {
 				font-size: 36px;
-				vertical-align: middle;
-				padding: 0 0 20px 0;
 				margin: 0;
 				width: 90%;
+				margin-bottom: -10px;
 			}
 
 			.choise-of-size {
 				font-size: 18px;
 				vertical-align: middle;
-				padding: 3px 0 20px 0px;
-				margin: 0;
+				padding: 0 0 20px 0;
 				width: 90%;
 			}
 		}
@@ -140,15 +127,15 @@
 			.kg2 {
 				display: block;
 				width: 100px;
-				height: 60px;
-				padding-top: 40px;
+				height: 62px;
+				padding-top: 38px;
 			}
 
 			.kg5 {
 				display: block;
 				width: 115px;
-				height: 65px;
-				padding-top: 50px;
+				height: 70px;
+				padding-top: 45px;
 				position: relative;
 
 				&::before {
@@ -166,8 +153,8 @@
 			.kg8 {
 				display: block;
 				width: 135px;
-				height: 75px;
-				padding-top: 60px;
+				height: 80px;
+				padding-top: 55px;
 				position: relative;
 
 				&::before {
@@ -213,26 +200,19 @@
 		max-width: 2500px;
 
 		.size__number {
-			flex-direction: column;
-			flex-wrap: wrap;
-			width: 100px;
-			padding: 0px 80px 40px 40px;
+			padding: 0 80px 40px 40px;
 
 			.number-of-size {
 				font-size: 60px;
 				vertical-align: middle;
 				padding: 0 0 20px 0;
-				margin: 0;
 				width: 90%;
 			}
 
 			.choise-of-size {
 				font-size: 27px;
 				line-height: 30px;
-				vertical-align: middle;
-				padding: 3px 0 0px 0px;
-				margin: 0;
-				width: 90%;
+				padding: 3px 0 0 0;
 			}
 		}
 	}

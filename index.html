@@ -11,7 +11,7 @@
   </head>
   <body>
   	<header class="page-header container">
-        <div class="title-burger">
+        <div class="page-header__title-burger">
             <p class="page-header__title">Cakes</p>
             <buttom class="main-nav__toggle" type="button">Открыть меню</buttom>
         </div>
@@ -25,7 +25,7 @@
                 <li><a href="#">Контакты</a></li>
             </ul>
         </div>
-        <span class="phone-number">+ 7 906 899 92 96</span>   
+        <p class="phone-number">+ 7 906 899 92 96</p>   
   	</header>
     <main>
         <div class="cakes-for-sale container">
@@ -58,33 +58,33 @@
         <div class="cakes-catalog container">
             <h3 class="cakes-catalog__title">Наши торты</h3>
             <div class="cakes-catalog__type cake-classic">
-                <span>Классические</span>
-                <p>24 вида</p>
+                <p class="cakes-catalog__kind-of-cakes">Классические</p>
+                <p class="cakes-catalog__how-many">24 вида</p>
                 <a href="">Смотреть</a>   
             </div>
-            <div class="cakes-catalog__wrapper">
+            <div class="cakes-catalog__wrapper cakes-catalog__wrapper-reverse">
                 <div class="cakes-catalog__type cake-mousse">
-                    <span>Муссовые</span>
-                    <p>12 видов</p>
+                    <p class="cakes-catalog__kind-of-cakes">Муссовые</p>
+                    <p class="cakes-catalog__how-many">12 видов</p>
                 </div>
                 <div class="cakes-catalog__type cake-wedding">
-                    <span>Свадебные</span>
-                    <p>20 видов</p>
+                    <p class="cakes-catalog__kind-of-cakes">Свадебные</p>
+                    <p class="cakes-catalog__how-many">20 видов</p>
                 </div>
             </div>
             <div class="cakes-catalog__wrapper">
                 <div class="cakes-catalog__type cake-male">
-                    <span>Мужчинам</span>
-                    <p>12 видов</p>
+                    <p class="cakes-catalog__kind-of-cakes">Мужчинам</p>
+                    <p class="cakes-catalog__how-many">12 видов</p>
                 </div>
                 <div class="cakes-catalog__type cake-woman">
-                    <span>Женщинам</span>
-                    <p>16 видов</p>
+                    <p class="cakes-catalog__kind-of-cakes">Женщинам</p>
+                    <p class="cakes-catalog__how-many">16 видов</p>
                 </div>
             </div>
             <div class="cakes-catalog__type cake-child">
-                <span>Детские</span>
-                <p>18 вида</p>
+                <p class="cakes-catalog__kind-of-cakes">Детские</p>
+                <p class="cakes-catalog__how-many">18 вида</p>
                 <a href="#">Смотреть</a>  
             </div>
         </div>
@@ -112,7 +112,7 @@
                     <input name="filling" type="radio" value="5">
                 </article>
                 <article class="filling__descriptions">
-                    <span class="description__title">Шоколадный ганаш</span>
+                    <p class="description__title">Шоколадный ганаш</p>
                     <p class="filling__description-ganash">Ароматный шоколадный бисквит, густой шоколадный крем - самый шоколадный из всех возможных десертов!</p>
                     <p class="filling__price">1000 руб/кг</p>
                     <button class="btn description-btn" name="1">Выбрать</button>
@@ -272,7 +272,7 @@
                         <img src="img/quote__commas--tablet.png" width="35" height="22" alt="Кавычки">
                     </picture>
                 </div>
-                <p class="quote__text">Я за простые рецептыю В Италии это называют cucina povera: когда обычные ингридиенты превращаются в божественное блюдо.</p>
+                <p class="quote__text">Я за простые рецепты. В Италии это называют cucina povera: когда обычные ингридиенты превращаются в божественное блюдо.</p>
                 <picture class="quote__signature">
                     <source media="(min-width: 1200px)"
                             srcset="img/quote__signature--desktop.png">
@@ -336,21 +336,22 @@
         </section>
         <section class="cakes-order container">
             <div class="cakes-order__container">
-            <h3>Как заказать</h3>
-            <div class="cakes-order__step">
-                <p class="step__number">1</p>
-                <p class="step__title">Срок заказа</p>
-                <p class="step__description">Размещать заказы желательно за 2-3 дня. На выходные заказы лучше размещать минимум за неделю.</p>
-            </div>
-            <div class="cakes-order__step">
-                <p class="step__number">2</p>
-                <p class="step__title">Доставка по городу</p>
-                <p class="step__description">Доставка в пределах города 200 рублей,<br>при заказе на сумму более 2000 доставка бесплатно.</p>  
-            </div>
-            <div class="cakes-order__step">
-                <p class="step__number">3</p>
-                <p class="step__title">Доставка за городом</p>
-                <p class="step__description">Доставка за пределами города<br>рассчитывается индивидуально.</p>
+                <h3>Как заказать</h3>
+                <div class="cakes-order__step">
+                    <p class="step__number">1</p>
+                    <p class="step__title">Срок заказа</p>
+                    <p class="step__description">Размещать заказы желательно за 2-3 дня. На выходные заказы лучше размещать минимум за неделю.</p>
+                </div>
+                <div class="cakes-order__step">
+                    <p class="step__number">2</p>
+                    <p class="step__title">Доставка по городу</p>
+                    <p class="step__description">Доставка в пределах города 200 рублей,<br>при заказе на сумму более 2000 доставка бесплатно.</p>  
+                </div>
+                <div class="cakes-order__step">
+                    <p class="step__number">3</p>
+                    <p class="step__title">Доставка за городом</p>
+                    <p class="step__description">Доставка за пределами города<br>рассчитывается индивидуально.</p>
+                </div>
             </div> 
         </section>
         <section class="cakes-contacts container">
