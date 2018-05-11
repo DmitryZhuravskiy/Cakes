@@ -67,19 +67,7 @@ img {
   border-radius: 25px;
 }
 .btn:hover {
-  text-decoration: none;
-  border-color: #d5c9bd;
-}
-.btn:active {
-  color: rgba(0, 0, 0, 0.3);
-  text-decoration: none;
-  background-color: #d5c9bd;
-  border-color: #d5c9bd;
-  outline: none;
-}
-.btn:focus {
-  text-decoration: none;
-  outline: none;
+  box-shadow: 0px 8px 12px 0px rgba(255, 0, 67, 0.3);
 }
 .btn input[type="text"] {
   background-color: #f2f2f2;
@@ -90,6 +78,9 @@ img {
 .btn input[type="text"]:active {
   background-color: #fff;
   border: 4px #e5e5e5 solid;
+}
+.btn-social:hover {
+  box-shadow: 2px 2px 12px 8px rgba(255, 0, 67, 0.16);
 }
 .container {
   padding: 0 20px;
@@ -1433,7 +1424,8 @@ h3 {
   display: flex;
   justify-content: column;
   flex-wrap: wrap;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   max-width: 400px;
   margin: 0 auto;
   max-height: 720px;
@@ -2114,6 +2106,10 @@ h3 {
   list-style-type: none;
   margin-right: 30px;
   margin-left: 0;
+  cursor: pointer;
+}
+.cakes-contacts .cakes-contacts__phone-mail-social ul li:hover {
+  box-shadow: 2px 2px 12px 8px rgba(255, 0, 67, 0.16);
 }
 .cakes-contacts .cakes-contacts__phone-mail-social ul li a {
   display: flex;
