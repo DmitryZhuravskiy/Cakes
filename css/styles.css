@@ -39,6 +39,8 @@ body {
   margin-right: -1px;
   margin-left: -1px;
   box-sizing: padding-box;
+  overflow-x: hidden;
+  position: relative;
 }
 img {
   max-width: 100%;
@@ -109,6 +111,10 @@ h3 {
   font-size: 24px;
   line-height: 34px;
 }
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+}
 @media (min-width: 768px) {
   span {
     font-size: 26px;
@@ -178,6 +184,7 @@ h3 {
   background: #000;
   position: relative;
   flex-grow: 0;
+  cursor: pointer;
 }
 .page-header .page-header__title-burger .main-nav__toggle::before,
 .page-header .page-header__title-burger .main-nav__toggle::after {
@@ -195,16 +202,19 @@ h3 {
 .page-header .navigation {
   display: none;
   position: absolute;
+  top: 56px;
+  left: 0;
 }
 .page-header .navigation ul {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-direction: column;
   list-style-type: none;
 }
 .page-header .navigation ul li {
   min-width: 320px;
-  padding: 0 17px;
+  padding: 15px 17px;
   background: #e7e7e7;
   border-top: 1px #e4e4e4 solid;
   border-bottom: 1px #dedede solid;
@@ -216,6 +226,7 @@ h3 {
   text-decoration: none;
   color: #000;
   font-size: 13px;
+  margin: 0 auto;
 }
 @media (min-width: 768px) {
   .page-header .page-header__title-burger {
@@ -245,6 +256,8 @@ h3 {
     position: relative;
     margin-top: 22px;
     flex-grow: 1;
+    top: 0;
+    left: 0;
   }
   .page-header .navigation ul {
     justify-content: flex-start;
@@ -252,6 +265,7 @@ h3 {
   }
   .page-header .navigation ul li {
     min-width: auto;
+    padding: 0;
     padding-left: 40px;
     background: #fbebea;
     border-top: 0px green solid;
@@ -273,13 +287,6 @@ h3 {
   position: relative;
   max-width: 100%;
   margin-right: 20px;
-}
-.cakes-for-sale .cakes-for-sale__fon {
-  order: 4;
-  position: absolute;
-  top: -190px;
-  right: 160px;
-  z-index: 1;
 }
 .cakes-for-sale .cakes-for-sale__title {
   font: bold normal 40px/36px "Playfair Display";
@@ -321,6 +328,13 @@ h3 {
 .cakes-for-sale .cakes-for-sale__natural-free {
   width: 100%;
 }
+@media (max-width: 767px) {
+  .cakes-for-sale__strawberry-top,
+  .cakes-for-sale__raspberry,
+  .cakes-for-sale__strawberry-bottom {
+    display: none;
+  }
+}
 @media (min-width: 768px) {
   .cakes-for-sale {
     display: flex;
@@ -329,13 +343,14 @@ h3 {
     flex-wrap: nowrap;
     width: 480px;
     margin-right: 0;
+    position: relative;
   }
   .cakes-for-sale .cakes-for-sale__title {
     font-size: 55px;
     line-height: 60px;
     text-align: left;
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 0;
     min-width: 280px;
     z-index: 2;
   }
@@ -348,22 +363,22 @@ h3 {
   }
   .cakes-for-sale .cakes-for-sale__btn {
     order: 1;
-    margin: 60px 0px;
+    margin: 60px 0px 100px 0;
     display: inline-block;
-    padding-bottom: 20px;
+    padding: 20px 60px;
     height: 10px;
-    width: 200px;
+    width: 120px;
   }
   .cakes-for-sale .cakes-for-sale__natural-free {
     order: 4;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 500px;
+    width: 600px;
   }
   .cakes-for-sale .cakes-for-sale__natural,
   .cakes-for-sale .cakes-for-sale__free {
-    width: 150px;
+    width: 200px;
     display: inline-block;
     padding-left: 65px;
     flex-shrink: 0;
@@ -379,20 +394,27 @@ h3 {
   .cakes-for-sale .cakes-for-sale__free {
     flex-shrink: 1;
   }
-  .cakes-for-sale .cakes-for-sale__fon {
-    order: 4;
+  .cakes-for-sale .cakes-for-sale__strawberry-top {
     position: absolute;
-    top: 100px;
-    right: -300px;
-    z-index: 1;
-    width: 450px;
-    height: 451px;
+    top: 25px;
+    left: 300px;
+  }
+  .cakes-for-sale .cakes-for-sale__raspberry {
+    position: absolute;
+    top: 270px;
+    left: 280px;
+  }
+  .cakes-for-sale .cakes-for-sale__strawberry-bottom {
+    position: absolute;
+    top: 420px;
+    left: 255px;
   }
 }
 @media (min-width: 1200px) {
   .cakes-for-sale {
     box-sizing: padding-box;
     width: 1000px;
+    padding-top: 160px;
   }
   .cakes-for-sale .cakes-for-sale__title {
     font-size: 78px;
@@ -403,20 +425,98 @@ h3 {
     line-height: 70px;
   }
   .cakes-for-sale .cakes-for-sale__natural-free {
-    width: 650px;
+    width: 500px;
+    margin-top: 100px;
   }
   .cakes-for-sale .cakes-for-sale__natural-free .cakes-for-sale__natural,
   .cakes-for-sale .cakes-for-sale__natural-free .cakes-for-sale__free {
-    width: 260px;
+    width: 170px;
+    padding-left: 65px;
+    line-height: 16px;
   }
-  .cakes-for-sale .cakes-for-sale__fon {
+  .cakes-for-sale .cakes-for-sale__natural-free .cakes-for-sale__natural img,
+  .cakes-for-sale .cakes-for-sale__natural-free .cakes-for-sale__free img {
+    position: absolute;
+    top: 45px;
+    left: 0;
+  }
+  .cakes-for-sale .cakes-for-sale__natural-free .cakes-for-sale__free {
+    width: 200px;
+  }
+  .cakes-for-sale .cakes-for-sale__strawberry-top {
+    position: absolute;
+    top: 10px;
+    left: 495px;
+    width: 111px;
+    height: 110px;
+  }
+  .cakes-for-sale .cakes-for-sale__strawberry-top img {
+    width: 111px;
+    height: 110px;
+  }
+  .cakes-for-sale .cakes-for-sale__raspberry {
+    position: absolute;
+    top: 410px;
+    left: 360px;
+    width: 63px;
+    height: 60px;
+  }
+  .cakes-for-sale .cakes-for-sale__raspberry img {
+    width: 63px;
+    height: 60px;
+  }
+  .cakes-for-sale .cakes-for-sale__strawberry-bottom {
+    position: absolute;
+    top: 630px;
+    left: 300px;
+    width: 168px;
+    height: 119px;
+  }
+  .cakes-for-sale .cakes-for-sale__strawberry-bottom img {
+    width: 168px;
+    height: 119px;
+  }
+}
+.cakes-for-sale__fon {
+  position: absolute;
+  top: -90px;
+  left: calc(50% - 195px);
+  z-index: 1;
+  width: 390px;
+  height: 391px;
+}
+.cakes-for-sale__fon img {
+  width: 390px;
+  height: 391px;
+}
+@media (min-width: 768px) {
+  .cakes-for-sale__fon {
     order: 4;
     position: absolute;
-    top: 100px;
-    left: 540px;
+    top: 35px;
+    left: calc(100% - 505px);
     z-index: 1;
-    width: 540px;
-    height: 541px;
+    width: 570px;
+    height: 571px;
+  }
+  .cakes-for-sale__fon img {
+    width: 570px;
+    height: 571px;
+  }
+}
+@media (min-width: 1200px) {
+  .cakes-for-sale__fon {
+    order: 4;
+    position: absolute;
+    top: 50px;
+    left: calc(100% - 855px);
+    z-index: 1;
+    width: 940px;
+    height: 941px;
+  }
+  .cakes-for-sale__fon img {
+    width: 940px;
+    height: 941px;
   }
 }
 .cakes-catalog {
@@ -2137,6 +2237,9 @@ h3 {
     max-width: 1200px;
     margin-top: 28px;
     max-height: 1250px;
+    box-sizing: padding-box;
+    margin-right: 20px;
+    position: relative;
   }
   .cakes-contacts .cakes-contacts__title {
     width: 100%;
@@ -2291,7 +2394,7 @@ h3 {
   .footer .footer-wrapper {
     flex-direction: row;
     justify-content: space-between;
-    min-width: 768px;
+    min-width: 728px;
     max-width: 1200px;
   }
   .footer .footer-wrapper .footer__title {
