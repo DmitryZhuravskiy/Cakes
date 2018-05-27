@@ -38,6 +38,7 @@ body {
   background-color: #fbebea;
   margin-right: -1px;
   margin-left: -1px;
+  box-sizing: padding-box;
 }
 img {
   max-width: 100%;
@@ -85,6 +86,7 @@ img {
 .container {
   padding: 0 20px;
   margin: 0;
+  box-sizing: padding-box;
 }
 p {
   font-family: "Circle";
@@ -115,11 +117,13 @@ h3 {
   h3 {
     font-size: 28px;
     line-height: 52px;
+    box-sizing: padding-box;
   }
 }
 @media (min-width: 1200px) {
   .container {
     padding: 0 74px;
+    box-sizing: padding-box;
   }
   p {
     font-size: 18px;
@@ -2044,6 +2048,9 @@ h3 {
   padding-left: 10px;
   font-size: 14px;
 }
+.cakes-contacts input[type="text"]:focus {
+  outline: none;
+}
 .cakes-contacts input[type="text"]::-webkit-input-placeholder {
   color: #cccccc;
 }
@@ -2060,6 +2067,9 @@ h3 {
   font-size: 14px;
   width: 100%;
   border: 0px green solid;
+}
+.cakes-contacts textarea:focus {
+  outline: none;
 }
 .cakes-contacts textarea::-webkit-input-placeholder {
   color: #cccccc;
