@@ -219,12 +219,19 @@ textarea:focus {
   border-top: 1px #e4e4e4 solid;
   border-bottom: 1px #dedede solid;
 }
+.page-header .navigation ul li:hover {
+  background: #9f8787;
+}
+.page-header .navigation ul li:hover a {
+  color: #000;
+  font-weight: bold;
+}
 .page-header .navigation ul li a {
   text-transform: uppercase;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
-  color: #000;
+  color: #383838;
   font-size: 13px;
   margin: 0 auto;
 }
@@ -268,8 +275,14 @@ textarea:focus {
     padding: 0;
     padding-left: 40px;
     background: #fbebea;
-    border-top: 0px green solid;
-    border-bottom: 0px green solid;
+    border-top: 0 green solid;
+    border-bottom: 0 green solid;
+  }
+  .page-header .navigation ul li:hover {
+    background: #fbebea;
+  }
+  .page-header .navigation ul li:hover a {
+    color: #f50049;
   }
   .page-header .phone-number {
     display: inline-block;
@@ -752,28 +765,55 @@ textarea:focus {
   font-size: 18px;
   padding: 3px 0 20px 12px;
 }
-.cakes-special__filling .filling__chocolate {
+.cakes-special__filling .filling__material {
   display: flex;
   position: relative;
   margin: 0 auto;
 }
-.cakes-special__filling .filling__chocolate img {
-  width: 100%;
+.cakes-special__filling .filling__material img {
   padding: 0;
   margin: 0 auto;
 }
-.cakes-special__filling .filling__chocolate p {
+.cakes-special__filling .filling__material p {
   position: absolute;
   right: 10px;
   bottom: -5px;
   color: white;
   font-size: 12px;
 }
+.cakes-special__filling .filling__raphaelloh p {
+  color: #f40049;
+}
 .cakes-special__filling .filling__radiobuttons {
   display: block;
   width: 200px;
   padding: 5px;
   margin: 0 auto;
+}
+.cakes-special__filling .filling__radiobuttons input[type="radio"] {
+  display: none;
+}
+.cakes-special__filling .filling__radiobuttons .slider-controls {
+  width: 110px;
+  margin: 0 auto;
+}
+.cakes-special__filling .filling__radiobuttons .slider-controls label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  margin: 5px;
+}
+.cakes-special__filling .filling__radiobuttons #fil_1:checked ~ .slider-controls label[for="fil_1"],
+.cakes-special__filling .filling__radiobuttons #fil_2:checked ~ .slider-controls label[for="fil_2"],
+.cakes-special__filling .filling__radiobuttons #fil_3:checked ~ .slider-controls label[for="fil_3"],
+.cakes-special__filling .filling__radiobuttons #fil_4:checked ~ .slider-controls label[for="fil_4"],
+.cakes-special__filling .filling__radiobuttons #fil_5:checked ~ .slider-controls label[for="fil_5"] {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background-color: #f50049;
 }
 .cakes-special__filling .filling__descriptions {
   width: 100%;
@@ -783,9 +823,6 @@ textarea:focus {
   line-height: 16px;
   font-weight: bold;
   text-align: left;
-}
-.cakes-special__filling .filling__descriptions .filling__description-ganash {
-  width: 280px;
 }
 .cakes-special__filling .filling__descriptions .filling__price {
   font-family: "Playfair Display";
@@ -798,6 +835,11 @@ textarea:focus {
 }
 .cakes-special__filling .filling__descriptions .description-btn {
   margin: 0 auto;
+}
+@media (max-width: 767px) {
+  .filling__material img {
+    height: 113px;
+  }
 }
 @media (min-width: 768px) {
   .cakes-special__filling {
@@ -914,6 +956,7 @@ textarea:focus {
   max-width: 400px;
   margin: 0 auto;
   margin-top: 10px;
+  position: relative;
 }
 .cakes-special__size .size__number {
   display: flex;
@@ -939,6 +982,62 @@ textarea:focus {
   width: 100%;
   margin: 0 auto;
 }
+.cakes-special__size .size__characteristics .kg1 {
+  display: block;
+  width: 70px;
+  height: 45px;
+  padding-top: 25px;
+}
+.cakes-special__size .size__characteristics .kg2 {
+  display: block;
+  width: 100px;
+  height: 62px;
+  padding-top: 38px;
+}
+.cakes-special__size .size__characteristics .kg5 {
+  display: block;
+  width: 115px;
+  height: 70px;
+  padding-top: 45px;
+  position: relative;
+}
+.cakes-special__size .size__characteristics .kg5::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px black dotted;
+}
+.cakes-special__size .size__characteristics .kg8 {
+  display: block;
+  width: 135px;
+  height: 80px;
+  padding-top: 55px;
+  position: relative;
+}
+.cakes-special__size .size__characteristics .kg8::before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  border: 3px black dotted;
+}
+.cakes-special__size .size__characteristics .kg8::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px black dotted;
+}
 .cakes-special__size .characteristics__weight {
   display: block;
   width: 100px;
@@ -949,7 +1048,7 @@ textarea:focus {
   vertical-align: middle;
   padding-top: 40px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
 }
 .cakes-special__size .characteristics__radius-of-cake {
   text-align: center;
@@ -964,10 +1063,38 @@ textarea:focus {
 .cakes-special__size .size-btn {
   margin: 0 auto;
 }
-@media (max-width: 767px) {
-  .not-for-your-eyes {
-    display: none;
-  }
+.cakes-special__size .size__radiobuttons {
+  display: block;
+  width: 100px;
+  padding: 5px;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 180px;
+  left: calc(50% - 50px);
+}
+.cakes-special__size .size__radiobuttons input[type="radio"] {
+  display: none;
+}
+.cakes-special__size .size__radiobuttons .slider-controls {
+  width: 110px;
+  margin: 0 auto;
+}
+.cakes-special__size .size__radiobuttons .slider-controls label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #dddddd;
+  margin: 5px;
+}
+.cakes-special__size .size__radiobuttons #size_1:checked ~ .slider-controls label[for="size_1"],
+.cakes-special__size .size__radiobuttons #size_2:checked ~ .slider-controls label[for="size_2"],
+.cakes-special__size .size__radiobuttons #size_3:checked ~ .slider-controls label[for="size_3"],
+.cakes-special__size .size__radiobuttons #size_4:checked ~ .slider-controls label[for="size_4"] {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  background-color: #f50049;
 }
 @media (min-width: 768px) {
   .cakes-special__size {
@@ -1008,67 +1135,17 @@ textarea:focus {
     flex-direction: column;
     justify-content: flex-end;
   }
-  .cakes-special__size .size__characteristics .kg1 {
-    display: block;
-    width: 70px;
-    height: 45px;
-    padding-top: 25px;
-  }
-  .cakes-special__size .size__characteristics .kg2 {
-    display: block;
-    width: 100px;
-    height: 62px;
-    padding-top: 38px;
-  }
-  .cakes-special__size .size__characteristics .kg5 {
-    display: block;
-    width: 115px;
-    height: 70px;
-    padding-top: 45px;
-    position: relative;
-  }
-  .cakes-special__size .size__characteristics .kg5::before {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 3px black dotted;
-  }
-  .cakes-special__size .size__characteristics .kg8 {
-    display: block;
-    width: 135px;
-    height: 80px;
-    padding-top: 55px;
-    position: relative;
-  }
-  .cakes-special__size .size__characteristics .kg8::before {
-    content: "";
-    position: absolute;
-    top: 17px;
-    left: 17px;
-    width: 95px;
-    height: 95px;
-    border-radius: 50%;
-    border: 3px black dotted;
-  }
-  .cakes-special__size .size__characteristics .kg8::after {
-    content: "";
-    position: absolute;
-    top: 35px;
-    left: 35px;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 3px black dotted;
-  }
   .not-for-your-eyes {
     display: block;
   }
   .size-btn {
     display: none;
+  }
+  .slider-controls {
+    display: none;
+  }
+  .size__characteristics {
+    display: flex !important;
   }
 }
 @media (min-width: 1200px) {
@@ -1311,10 +1388,6 @@ textarea:focus {
   font-size: 18px;
   padding: 3px 0 20px 12px;
 }
-.cakes-special__choise .choise__img-left,
-.cakes-special__choise .choise__img-right {
-  display: none;
-}
 @media (max-width: 767px) {
   .choise__img-left,
   .choise__img-right {
@@ -1325,6 +1398,7 @@ textarea:focus {
   .cakes-special__choise {
     max-width: 1200px;
     padding: 20px 0;
+    position: relative;
   }
   .cakes-special__choise h3 {
     font-size: 27px;
@@ -1359,6 +1433,17 @@ textarea:focus {
   }
   .cakes-special__choise .choise__parameters .btn-form-choise {
     margin-left: 30px;
+  }
+  .cakes-special__choise .choise__img-left,
+  .cakes-special__choise .choise__img-right {
+    position: absolute;
+    bottom: -70px;
+  }
+  .cakes-special__choise .choise__img-right {
+    right: -15px;
+  }
+  .cakes-special__choise .choise__img-left {
+    left: -15px;
   }
 }
 @media (min-width: 1200px) {
@@ -1399,6 +1484,23 @@ textarea:focus {
   }
   .cakes-special__choise .choise__parameters .btn-form-choise {
     margin-left: 50px;
+  }
+  .cakes-special__choise .choise__img-left,
+  .cakes-special__choise .choise__img-right {
+    bottom: -148px;
+    width: 549px;
+    height: 148px;
+  }
+  .cakes-special__choise .choise__img-left img,
+  .cakes-special__choise .choise__img-right img {
+    width: 549px;
+    height: 148px;
+  }
+  .cakes-special__choise .choise__img-right {
+    right: -100px;
+  }
+  .cakes-special__choise .choise__img-left {
+    left: -70px;
   }
 }
 .cakes-comments {
@@ -1802,7 +1904,11 @@ textarea:focus {
   max-width: 380px;
 }
 @media (max-width: 767px) {
-  .our-advantage__img {
+  .our-advantage__img,
+  .cakes__our-advantage__raspberry,
+  .cakes__our-advantage__leafe,
+  .cakes__our-advantage__apple,
+  .cakes__our-advantage__flower {
     display: none;
   }
 }
@@ -1850,6 +1956,26 @@ textarea:focus {
   .cakes__our-advantage .advantage-card__fresh-text {
     text-align: left;
     line-height: 18px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__raspberry {
+    position: absolute;
+    top: 130px;
+    left: 5px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__leafe {
+    position: absolute;
+    top: 70px;
+    left: 75px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__apple {
+    position: absolute;
+    top: 90px;
+    left: 170px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__flower {
+    position: absolute;
+    top: 370px;
+    left: 230px;
   }
 }
 @media (min-width: 1200px) {
@@ -1900,6 +2026,50 @@ textarea:focus {
   .cakes__our-advantage .our-advantage__list .advantage-card__fresh-text {
     font-size: 20px;
     line-height: 24px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__raspberry {
+    position: absolute;
+    top: 140px;
+    left: 10px;
+    width: 52px;
+    height: 54px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__raspberry img {
+    width: 52px;
+    height: 54px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__leafe {
+    position: absolute;
+    top: 40px;
+    left: 110px;
+    width: 103px;
+    height: 148px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__leafe img {
+    width: 103px;
+    height: 148px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__apple {
+    position: absolute;
+    top: 75px;
+    left: 295px;
+    width: 51px;
+    height: 48px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__apple img {
+    width: 51px;
+    height: 48px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__flower {
+    position: absolute;
+    top: 600px;
+    left: 380px;
+    width: 167px;
+    height: 132px;
+  }
+  .cakes__our-advantage .cakes__our-advantage__flower img {
+    width: 167px;
+    height: 132px;
   }
 }
 .cakes-for-clients {
@@ -2363,6 +2533,10 @@ textarea:focus {
   list-style-type: none;
   padding: 10px 0;
 }
+.footer .footer-wrapper ul li:hover a {
+  color: #f50049;
+  font-weight: bold;
+}
 .footer .footer-wrapper ul li a {
   text-decoration: none;
   color: white;
@@ -2370,6 +2544,10 @@ textarea:focus {
 }
 .footer .footer-wrapper .footer__social-links a {
   margin-right: 20px;
+  opacity: 0.4;
+}
+.footer .footer-wrapper .footer__social-links a:hover {
+  opacity: 1;
 }
 .footer .footer-wrapper .footer__copyright {
   color: #b3b3b3;
@@ -2396,12 +2574,13 @@ textarea:focus {
     justify-content: space-between;
     min-width: 728px;
     max-width: 1200px;
+    width: 100%;
   }
   .footer .footer-wrapper .footer__title {
     width: 30px;
     font-size: 18px;
     flex-grow: 0;
-    margin-left: 20px;
+    margin-left: 30px;
   }
   .footer .footer-wrapper ul {
     min-width: 620px;
@@ -2436,7 +2615,11 @@ textarea:focus {
   }
   .footer .social-links-wrapper-2 .footer__social-links a {
     margin-right: 20px;
-    vertical-align: middle;
+    vertical-align: bottom;
+    opacity: 0.4;
+  }
+  .footer .social-links-wrapper-2 .footer__social-links a:hover {
+    opacity: 1;
   }
   .footer .social-links-wrapper-2 p {
     order: 1;
@@ -2460,17 +2643,18 @@ textarea:focus {
   }
   .footer .footer-wrapper .footer__title {
     width: 30px;
-    font-size: 18px;
-    line-height: 24px;
     flex-grow: 0;
     margin-left: 72px;
+    margin-bottom: 0;
     font-size: 28px;
-    vertical-align: middle;
+    line-height: 40px;
+    align-self: center;
   }
   .footer .footer-wrapper ul {
     min-width: 620px;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: flex-end;
     flex-grow: 1;
     vertical-align: middle;
   }
@@ -2487,6 +2671,7 @@ textarea:focus {
   }
   .footer .footer-wrapper .social-links-wrapper {
     display: flex;
+    align-self: center;
   }
   .footer .footer-wrapper .social-links-wrapper .footer__copyright {
     display: none;
@@ -2498,8 +2683,9 @@ textarea:focus {
   }
   .footer .footer-wrapper .social-links-wrapper .footer__social-links a {
     display: inline-block;
+    margin: 0;
     margin-left: 15px;
-    margin-top: 22px;
+    margin-top: 35px;
     width: 30px;
     vertical-align: middle;
   }

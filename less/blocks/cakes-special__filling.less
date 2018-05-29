@@ -31,13 +31,12 @@
 		}
 	}
 
-	.filling__chocolate {
+	.filling__material {
 		display: flex;
 		position: relative;
 		margin: 0 auto;
 
 		img {
-			width: 100%;
 			padding: 0;
 			margin: 0 auto;
 		}
@@ -51,11 +50,47 @@
 		}
 	}
 
+	.filling__raphaelloh {
+
+		p {
+			color: #f40049;
+		}
+	}
+
 	.filling__radiobuttons {
 		display: block;
 		width: 200px;
 		padding: 5px;
 		margin: 0 auto;
+
+		input[type="radio"] {
+			display: none;
+		}
+
+		.slider-controls {
+			width: 110px;
+			margin: 0 auto;
+
+			label {
+				display: inline-block;
+				width: 8px;
+				height: 8px;
+				border-radius: 50%;
+				background-color: #dddddd;
+				margin: 5px;
+			}
+		}
+
+		#fil_1:checked ~ .slider-controls label[for="fil_1"],
+		#fil_2:checked ~ .slider-controls label[for="fil_2"],
+		#fil_3:checked ~ .slider-controls label[for="fil_3"],
+		#fil_4:checked ~ .slider-controls label[for="fil_4"],
+		#fil_5:checked ~ .slider-controls label[for="fil_5"] {
+			display: inline-block;
+			width: 11px;
+			height: 11px;
+			background-color: #f50049;
+		}
 	}
 
 	.filling__descriptions {
@@ -66,10 +101,6 @@
 			line-height: 16px;
 			font-weight: bold;
 			text-align: left;
-		}
-
-		.filling__description-ganash {
-			width: 280px;
 		}
 
 		.filling__price {
@@ -84,6 +115,14 @@
 
 		.description-btn {
 			margin: 0 auto;
+		}
+	}
+}
+
+@media @mobile-widths-only {
+	.filling__material {
+		img {
+			height: 113px;
 		}
 	}
 }

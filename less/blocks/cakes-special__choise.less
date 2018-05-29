@@ -61,11 +61,6 @@
 		font-size: 18px;
 		padding: 3px 0 20px 12px;
 	}
-
-	.choise__img-left,
-	.choise__img-right {
-		display: none;
-	}
 }
 
 @media @mobile-widths-only {
@@ -81,6 +76,7 @@
 	.cakes-special__choise {
 		max-width: 1200px;
 		padding: 20px 0;
+		position: relative;
 
 		h3 {
 			font-size: 27px;
@@ -132,6 +128,20 @@
 			.btn-form-choise {
 				margin-left: 30px;
 			}
+		}
+
+		.choise__img-left,
+		.choise__img-right {
+			position: absolute;
+			bottom: -70px;
+		}
+
+		.choise__img-right {
+			right: -15px;
+		}
+
+		.choise__img-left {
+			left: -15px;
 		}
 	}
 }
@@ -192,6 +202,26 @@
 			.btn-form-choise {
 				margin-left: 50px;
 			}
+		}
+
+		.choise__img-left,
+		.choise__img-right {
+			bottom: -148px;
+			width: 549px;
+			height: 148px;
+
+			img {
+				width: 549px;
+				height: 148px;
+			}
+		}
+
+		.choise__img-right {
+			right: -100px;
+		}
+
+		.choise__img-left {
+			left: -70px;
 		}
 	}
 }

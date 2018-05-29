@@ -113,7 +113,7 @@
                     <p class="number-of-filling">01</p>
                     <p class="choise-of-filling">Выберете начинку</p>
                 </article>
-                <article class="filling__chocolate">
+                <article class="filling__material filling__ganash">
                     <picture>
                        <source media="(min-width: 1200px)" srcset="img/filling-chocolate--desktop.jpg">
                        <source media="(min-width: 768px)" srcset="img/filling-chocolate--tablet.jpg">
@@ -121,18 +121,67 @@
                     </picture>
                     <p>1/12</p>
                 </article>
+                <article class="filling__material filling__raphaelloh">
+                       <img src="img/rafaello.jpg" width="241" height="113" alt="Рафаэлло">
+                    <p>2/12</p>
+                </article>
+                <article class="filling__material filling__zaher">
+                       <img src="img/zaher.jpg" width="241" height="113" alt="Классический захер">
+                    <p>3/12</p>
+                </article>
+                <article class="filling__material filling__yogurt">
+                       <img src="img/yogurt.jpg" width="241" height="113" alt="Йогуртовый торт">
+                    <p>4/12</p>
+                </article>
+                <article class="filling__material filling__snikers">
+                       <img src="img/snikers.jpg" width="241" height="113" alt="Сникерс">
+                    <p>5/12</p>
+                </article>
                 <article class="filling__radiobuttons">
-                    <input name="filling" type="radio" value="1" checked>
-                    <input name="filling" type="radio" value="2">
-                    <input name="filling" type="radio" value="3">
-                    <input name="filling" type="radio" value="4">
-                    <input name="filling" type="radio" value="5">
+                    <input name="filling" type="radio" id="fil_1" checked>
+                    <input name="filling" type="radio" id="fil_2">
+                    <input name="filling" type="radio" id="fil_3">
+                    <input name="filling" type="radio" id="fil_4">
+                    <input name="filling" type="radio" id="fil_5">
+                    <div class="slider-controls">
+                        <label for="fil_1"></label>
+                        <label for="fil_2"></label>
+                        <label for="fil_3"></label>
+                        <label for="fil_4"></label>
+                        <label for="fil_5"></label>
+                    </div>
                 </article>
                 <article class="filling__descriptions">
+                  <div class="filling__descriptions--ganash">
                     <p class="description__title">Шоколадный ганаш</p>
                     <p class="filling__description-ganash">Ароматный шоколадный бисквит, густой шоколадный крем - самый шоколадный из всех возможных десертов!</p>
                     <p class="filling__price">1000 руб/кг</p>
                     <button class="btn description-btn" name="1">Выбрать</button>
+                  </div>
+                  <div class="filling__descriptions--raphaelloh">
+                    <p class="description__title">Рафаэлло</p>
+                    <p class="filling__description">Эта начинка приносит по-настоящему райское наслаждение. Ванильный бисквит с кокосово-миндальным наполнением и нежным сливочным кремом на основе творожного сыра маскарпоне.</p>
+                    <p class="filling__price">1200 руб/кг</p>
+                    <button class="btn description-btn" name="1">Выбрать</button>
+                  </div>
+                  <div class="filling__descriptions--zaher">
+                    <p class="description__title">Классический захер</p>
+                    <p class="filling__description-ganash">Австрийский шедевр не мог быть не замечен нашими кондитерами. Сочный, плотный, насыщенный шоколадный бисквит пропитан аппетитным абрикосовым конфитюром с толстым слоем вкуснейшей шоколадной глазури. Не зря этот торт стал популярным во всем мире!</p>
+                    <p class="filling__price">1488 руб/кг</p>
+                    <button class="btn description-btn" name="1">Выбрать</button>
+                  </div>
+                  <div class="filling__descriptions--yogurt">
+                    <p class="description__title">Йогуртовый торт</p>
+                    <p class="filling__description-ganash">Йогуртовый бисквит, крем на основе творожного маскарпоне с кусочками лесных ягод не смогут остваить Вас равнодушными к этой начинке. Начинка является нашей новинкой, но уже успела набрать свой фан-клуб.</p>
+                    <p class="filling__price">900 руб/кг</p>
+                    <button class="btn description-btn" name="1">Выбрать</button>
+                  </div>
+                  <div class="filling__descriptions--snikers">
+                    <p class="description__title">Сникерс</p>
+                    <p class="filling__description-ganash">Шоколадный бисквит с шоколадом, карамелью и арахисом. Настоящий сникерс в мире тортов.</p>
+                    <p class="filling__price">1100 руб/кг</p>
+                    <button class="btn description-btn" name="1">Выбрать</button>
+                  </div>
                 </article>
             </section>
             <section class="cakes-special__size">
@@ -140,27 +189,39 @@
                     <p class="number-of-size">02</P>
                     <p class="choise-of-size">Размер</p>
                 </article>
-                <article class="size__characteristics">
+                <article class="size__characteristics weight-kg1">
                     <p class="characteristics__weight kg1">1кг</p>
                     <p class="characteristics__radius-of-cake">17-18 см</p>
                     <p class="characteristics__number-of-person">(1 кг - 6 персон)</p>
                 </article>
-                <article class="size__characteristics not-for-your-eyes">
+                <article class="size__characteristics weight-kg2">
                     <p class="characteristics__weight kg2">2кг</p>
                     <p class="characteristics__radius-of-cake">23-24 см</p>
                     <p class="characteristics__number-of-person">(10-12 персон)</p>
                 </article>
-                <article class="size__characteristics not-for-your-eyes">
+                <article class="size__characteristics weight-kg5">
                     <p class="characteristics__weight kg5">5кг</p>
                     <p class="characteristics__radius-of-cake">Два яруса 25 и 20 см</p>
                     <p class="characteristics__number-of-person">(15-20 персон)</p>
                 </article>
-                <article class="size__characteristics not-for-your-eyes">
+                <article class="size__characteristics not-for-your-eyes weight-kg8">
                     <p class="characteristics__weight kg8">8кг</p>
                     <p class="characteristics__radius-of-cake">Три яруса 30, 25 и 18 см</p>
                     <p class="characteristics__number-of-person">(25-30 персон)</p>
                 </article>
                 <button class="btn size-btn">Выбрать</button>
+                <article class="size__radiobuttons">
+                    <input name="size" type="radio" id="size_1" checked>
+                    <input name="size" type="radio" id="size_2">
+                    <input name="size" type="radio" id="size_3">
+                    <input name="size" type="radio" id="size_4">
+                    <div class="slider-controls">
+                        <label for="size_1"></label>
+                        <label for="size_2"></label>
+                        <label for="size_3"></label>
+                        <label for="size_4"></label>
+                    </div>
+                </article>
             </section>
             <section class="cakes-special__design">
                 <article class="design__number">
@@ -223,16 +284,20 @@
                     </article>
                     <input class="btn btn-form-choise" type="submit" value="Заказать">
                 </div>
-                <picture class="choise__img-left">
-                    <source media="(min-width: 1200px)"
-                        srcset="img/choise__img-left--desktop.png">
-                    <img src="img/choise__img-left--tablet.png" width="315" height="76" alt="Занавеска слева">
-                </picture>
-                <picture class="choise__img-right">
-                    <source media="(min-width: 1200px)"
-                        srcset="img/choise__img-right--desktop.png">
-                    <img src="img/choise__img-right--tablet.png" width="313" height="77" alt="Занавеска справа">
-                </picture>
+                <div class="choise__img-left">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="img/choise__img-left--desktop.png">
+                        <img src="img/choise__img-left--tablet.png" width="315" height="76" alt="Занавеска слева">
+                    </picture>
+                </div>
+                <div class="choise__img-right">
+                    <picture>
+                        <source media="(min-width: 1200px)"
+                            srcset="img/choise__img-right--desktop.png">
+                        <img src="img/choise__img-right--tablet.png" width="313" height="77" alt="Занавеска справа">
+                    </picture>
+                </div>
             </section>
         </form>
         <section class="cakes-comments container">
@@ -334,6 +399,22 @@
                     <p class="advantage-card__fresh-text">Торты изготавливаются в течение суток до отправки</p>
                 </div>
             </article>
+            <picture class="cakes__our-advantage__raspberry">
+                <source media="(min-width: 1200px)" srcset="img/adventage-raspberry--desktop.png">
+                <img src="img/adventage-raspberry--tablet.png" width="30" height="30" alt="Малинка">
+            </picture>
+            <picture class="cakes__our-advantage__leafe">
+                <source media="(min-width: 1200px)" srcset="img/leafe--desktop.png">
+                <img src="img/leafe--tablet.png" width="56" height="81" alt="Листочек">
+            </picture>
+            <picture class="cakes__our-advantage__apple">
+                <source media="(min-width: 1200px)" srcset="img/apple--desktop.png">
+                <img src="img/apple--tablet.png" width="28" height="26" alt="Яблочко">
+            </picture>
+            <picture class="cakes__our-advantage__flower">
+                <source media="(min-width: 1200px)" srcset="img/flower--desktop.png">
+                <img src="img/flower--tablet.png" width="92" height="73" alt="Цветочек">
+            </picture>
         </section>
         <section class="cakes-for-clients container">
             <article class="cakes-for-clients__text">
@@ -449,5 +530,7 @@
         </div>
     </footer>
     <script src="js/page-header.js"></script>
+    <script src="js/filling_first.js"></script>
+     <script src="js/size.js"></script>
   </body>
 </html>
