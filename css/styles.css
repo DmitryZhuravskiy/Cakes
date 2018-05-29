@@ -744,6 +744,7 @@ textarea:focus {
   max-width: 400px;
   margin: 0 auto;
   margin-top: 20px;
+  position: relative;
 }
 .cakes-special__filling .filling__number {
   display: flex;
@@ -765,6 +766,72 @@ textarea:focus {
   font-size: 18px;
   padding: 3px 0 20px 12px;
 }
+.cakes-special__filling #last_fil {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  top: 200px;
+  left: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cakes-special__filling #last_fil:hover {
+  background-color: #e5d3d3;
+}
+.cakes-special__filling .balka_1 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #f77b91;
+  top: 22px;
+  left: 12px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
+.cakes-special__filling .balka_2 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #f77b91;
+  top: 13px;
+  left: 12px;
+  transform: rotate(-45deg);
+  z-index: 2;
+}
+.cakes-special__filling #next_fil {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  top: 200px;
+  right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cakes-special__filling #next_fil:hover {
+  background-color: #e5d3d3;
+}
+.cakes-special__filling .balka_3 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #f77b91;
+  top: 22px;
+  left: 15px;
+  transform: rotate(-45deg);
+  z-index: 2;
+}
+.cakes-special__filling .balka_4 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #f77b91;
+  top: 13px;
+  left: 15px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
 .cakes-special__filling .filling__material {
   display: flex;
   position: relative;
@@ -780,6 +847,10 @@ textarea:focus {
   bottom: -5px;
   color: white;
   font-size: 12px;
+}
+.cakes-special__filling .filling__material::before {
+  content: "";
+  position: absol;
 }
 .cakes-special__filling .filling__raphaelloh p {
   color: #f40049;
@@ -839,6 +910,10 @@ textarea:focus {
 @media (max-width: 767px) {
   .filling__material img {
     height: 113px;
+  }
+  #last_fil,
+  #next_fil {
+    display: none;
   }
 }
 @media (min-width: 768px) {
@@ -945,6 +1020,14 @@ textarea:focus {
   }
   .cakes-special__filling .filling__descriptions .description-btn {
     padding: 15px 60px;
+  }
+  .cakes-special__filling #last_fil {
+    left: 150px;
+    top: 220px;
+  }
+  .cakes-special__filling #next_fil {
+    right: 400px;
+    top: 220px;
   }
 }
 .cakes-special__size {

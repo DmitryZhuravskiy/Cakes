@@ -7,6 +7,7 @@
 	max-width: 400px;
 	margin: 0 auto;
 	margin-top: 20px;
+	position: relative;
 
 	.filling__number {
 		display: flex;
@@ -31,6 +32,80 @@
 		}
 	}
 
+	#last_fil {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		top: 200px;
+		left: 60px;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #e5d3d3;
+		}
+	}
+
+	.balka_1 {
+		position: absolute;
+		width: 15px;
+		height: 3px;
+		background-color: #f77b91;
+		top: 22px;
+		left: 12px;
+		transform: rotate(45deg);
+		z-index: 2;
+	}
+
+	.balka_2 {
+		position: absolute;
+		width: 15px;
+		height: 3px;
+		background-color: #f77b91;
+		top: 13px;
+		left: 12px;
+		transform: rotate(-45deg);
+		z-index: 2;
+	}
+
+	#next_fil {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background-color: #fff;
+		top: 200px;
+		right: 10px;
+		border-radius: 50%;
+		cursor: pointer;
+
+		&:hover {
+			background-color: #e5d3d3;
+		}
+	}
+
+	.balka_3 {
+		position: absolute;
+		width: 15px;
+		height: 3px;
+		background-color: #f77b91;
+		top: 22px;
+		left: 15px;
+		transform: rotate(-45deg);
+		z-index: 2;
+	}
+
+	.balka_4 {
+		position: absolute;
+		width: 15px;
+		height: 3px;
+		background-color: #f77b91;
+		top: 13px;
+		left: 15px;
+		transform: rotate(45deg);
+		z-index: 2;
+	}
+
 	.filling__material {
 		display: flex;
 		position: relative;
@@ -47,6 +122,15 @@
 			bottom: -5px;
 			color: white;
 			font-size: 12px;
+		}
+
+		&::before {
+			content: "";
+			position: absol;
+		}
+
+		&::after {
+			
 		}
 	}
 
@@ -124,6 +208,11 @@
 		img {
 			height: 113px;
 		}
+	}
+
+	#last_fil,
+	#next_fil {
+		display: none;
 	}
 }
 	
@@ -257,6 +346,16 @@
 			.description-btn {
 				padding: 15px 60px;
 			}
+		}
+
+		#last_fil {
+			left: 150px;
+			top: 220px;
+		}
+
+		#next_fil {
+			right: 400px;
+			top: 220px;
 		}
 	}
 }

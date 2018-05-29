@@ -44,7 +44,7 @@ $(document).ready(function(){
       index=5;
     }
 
-    $('#nect_fil').click(function(){
+    $('#next_fil').click(function(){
       index ++;
     })
 
