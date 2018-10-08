@@ -75,12 +75,24 @@
 		background: red;
 		background: url("../img/box-with-cake--tablet.jpg") no-repeat;
 		background-size: cover;
+		position: relative;
+
+		&:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 1366px;
+			height: 703px;
+			background: url("../img/box-with-cake--desktop.jpg") no-repeat;
+		}
 
 		.cakes-order__container {
 			margin: 52px 60px 0 55%;
 			max-width: 700px;
 			height: 483px;
 			background: transparent;
+			z-index: 2;
 
 			h3 {
 				margin: 0;
@@ -103,15 +115,18 @@
 @media @desktop-widths {
 
 	.cakes-order {
+		width: 100%;
 		margin-top: 300px;
 		max-height: 1000px;
 		min-height: 702px;
-		background: url("../img/box-with-cake--desktop.jpg") no-repeat;
+		background: linear-gradient(to top, #d82934 0%, #e3353d 35%, #e3353d 100%);
+// background: url("../img/box-with-cake--desktop.jpg") no-repeat;
 
 		.cakes-order__container {
 			margin: 10% 0 0 740px;
 			max-width: 690px;
 			height: 502px;
+			background-image: none;
 
 			h3 {
 		  		padding-bottom: 50px;

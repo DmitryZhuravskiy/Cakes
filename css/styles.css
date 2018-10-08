@@ -493,7 +493,7 @@ textarea:focus {
 .cakes-for-sale__fon {
   position: absolute;
   top: -90px;
-  left: calc(50% - 195px);
+  left: calc(-145%);
   z-index: 1;
   width: 390px;
   height: 391px;
@@ -507,7 +507,7 @@ textarea:focus {
     order: 4;
     position: absolute;
     top: 35px;
-    left: calc(100% - 505px);
+    left: calc(-405%);
     z-index: 1;
     width: 570px;
     height: 571px;
@@ -522,7 +522,7 @@ textarea:focus {
     order: 4;
     position: absolute;
     top: 50px;
-    left: calc(100% - 855px);
+    left: calc(-755%);
     z-index: 1;
     width: 940px;
     height: 941px;
@@ -1153,7 +1153,7 @@ textarea:focus {
   margin: 0 auto;
   position: absolute;
   bottom: 180px;
-  left: calc(50% - 50px);
+  left: calc(0%);
 }
 .cakes-special__size .size__radiobuttons input[type="radio"] {
   display: none;
@@ -2310,12 +2310,23 @@ textarea:focus {
     background: red;
     background: url("../img/box-with-cake--tablet.jpg") no-repeat;
     background-size: cover;
+    position: relative;
+  }
+  .cakes-order:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 1366px;
+    height: 703px;
+    background: url("../img/box-with-cake--desktop.jpg") no-repeat;
   }
   .cakes-order .cakes-order__container {
     margin: 52px 60px 0 55%;
     max-width: 700px;
     height: 483px;
     background: transparent;
+    z-index: 2;
   }
   .cakes-order .cakes-order__container h3 {
     margin: 0;
@@ -2332,15 +2343,17 @@ textarea:focus {
 }
 @media (min-width: 1200px) {
   .cakes-order {
+    width: 100%;
     margin-top: 300px;
     max-height: 1000px;
     min-height: 702px;
-    background: url("../img/box-with-cake--desktop.jpg") no-repeat;
+    background: linear-gradient(to top, #d82934 0%, #e3353d 35%, #e3353d 100%);
   }
   .cakes-order .cakes-order__container {
     margin: 10% 0 0 740px;
     max-width: 690px;
     height: 502px;
+    background-image: none;
   }
   .cakes-order .cakes-order__container h3 {
     padding-bottom: 50px;
