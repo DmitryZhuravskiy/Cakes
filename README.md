@@ -1,4 +1,6 @@
 # Cakes
 Landing page
 
-React-Redux app. React-create-app => npm redux + react-redux and it's work. 
+Creatind with create-react-app.
+
+React-create-app => add the repository code and website will be work. 
