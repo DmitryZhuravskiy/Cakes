@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
 const Header = () => {
     const [isShown, setIsShown] = useState(true);
     const toggleFIeldset = () => setIsShown(!isShown);
 
-
     return (
         <header className="page-header container">
             <div className="page-header__title-burger">
                 <p className="page-header__title">Cakes</p>
-                <div className="main-nav__toggle" onClick={ () => toggleFIeldset }>
+                <div className="main-nav__toggle" onClick={toggleFIeldset}>
                     <button className="main-nav__toggle-strike">Открыть меню</button>
                 </div>
             </div>
