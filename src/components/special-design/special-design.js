@@ -27,7 +27,7 @@ class SpecialDesign extends React.Component {
                     <p className="card__price">700 руб/кг</p>
                     <button className="btn description-btn">Выбрать</button>
                 </article>
-                <article className="design__card card__marshmallow" onClick={this.handleDesignChoiseMarshmallow} value='marshmallow'>
+                <article className="design__card card__marshmallow" onClick={this.props.handleDesignChoiseMarshmallow} value='marshmallow'>
                     <picture className="design__marshmallow">
                         <source media="(min-width: 1200px)" srcset="./img/design__marshmallow--desktop.jpg" />
                         <source media="(min-width: 768px)" srcset="./img/design__marshmallow--tablet.jpg" />
