@@ -1,10 +1,6 @@
 import React from "react";
 
 class SpecialSize extends React.Component {
-    constructor(props){
-        super(props);
-        }
-
     render() {
         return (
             <section className="cakes-special__size">
@@ -34,7 +30,7 @@ class SpecialSize extends React.Component {
                 </article>
                 <button className="btn size-btn">Выбрать</button>
                 <article className="size__radiobuttons">
-                    <input name="size" type="radio" id="size_1" checked />
+                    <input name="size" type="radio" id="size_1" defaultChecked />
                     <input name="size" type="radio" id="size_2" />
                     <input name="size" type="radio" id="size_3" />
                     <input name="size" type="radio" id="size_4" />

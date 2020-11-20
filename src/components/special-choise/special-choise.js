@@ -4,7 +4,7 @@ class SpecialChoise extends React.Component {
     render() {
         return (
             <section className="cakes-special__choise container">
-                <h3>Выш выбор</h3>
+                <h3 id="choise">Выш выбор</h3>
                 <div className="choise__parameters">
                     <article className="choise__parameter parameter__filling">
                         <label htmlFor="filling">Начинка</label>
@@ -22,13 +22,13 @@ class SpecialChoise extends React.Component {
                 </div>
                 <div className="choise__img-left">
                     <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/choise__img-left--desktop.png" />
+                        <source media="(min-width: 1200px)" srcSet="./img/choise__img-left--desktop.png" />
                         <img src="./img/choise__img-left--tablet.png" width="315" height="76" alt="Занавеска слева" />
                     </picture>
                 </div>
                 <div className="choise__img-right">
                     <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/choise__img-right--desktop.png" />
+                        <source media="(min-width: 1200px)" srcSet="./img/choise__img-right--desktop.png" />
                         <img src="./img/choise__img-right--tablet.png" width="313" height="77" alt="Занавеска справа" />
                     </picture>
                 </div>

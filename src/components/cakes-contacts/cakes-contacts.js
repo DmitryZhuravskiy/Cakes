@@ -35,7 +35,7 @@ class CakesContacts extends React.Component {
         return (
             <section className="cakes-contacts container">
                 <article className="cakes-contacts__title">
-                    <h3 className="cakes-contacts__description">Контакты</h3>
+                    <h3 className="cakes-contacts__description" id="contacts">Контакты</h3>
                     <span className="cakes-contacts__question-time">Остались вопросы?</span>
                 </article>
                 <form className="cakes-contacts__form" action="https://barbershop.ru" method="get" onSubmit={this.handleSubmit}>
@@ -57,12 +57,12 @@ class CakesContacts extends React.Component {
                     <p className="cakes-contacts__social">Мы в соц.сетях:</p>
                     <ul className='cakes-contacts__social-button'>
                         <li className="cakes-contacts__contact">
-                            <a className="contact__link"><img src="./img/footer-inst.png" alt="instagram" /></a></li>
+                            <a className="contact__link" href="https://www.instagram.com/"><img src="./img/footer-inst.png" alt="instagram" /></a></li>
                         <li className="cakes-contacts__contact">
-                            <a className="contact__link"><img src="./img/footer-vk.png" alt="vkontakte" /></a></li>
+                            <a className="contact__link" href="https://vk.com/"><img src="./img/footer-vk.png" alt="vkontakte" /></a></li>
                     </ul>
                     <picture className="cakes-contacts__strawberry">
-                        <source media="(min-width: 1200px)" srcset="./img/cake-strawberry--desktop.png" />
+                        <source media="(min-width: 1200px)" srcSet="./img/cake-strawberry--desktop.png" />
                         <img src="./img/cake-strawberry--tablet.png" width="602" height="401" alt="Клубничка" />
                     </picture>
                 </article>

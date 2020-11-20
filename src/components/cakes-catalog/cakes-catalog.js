@@ -7,7 +7,6 @@ const CakesCatalog = () => {
         <div className="cakes-catalog__type cake-classic">
             <p className="cakes-catalog__kind-of-cakes">Классические</p>
             <p className="cakes-catalog__how-many">24 вида</p>
-            <a href="">Смотреть</a>
         </div>
         <div className="cakes-catalog__wrapper cakes-catalog__wrapper-reverse">
             <div className="cakes-catalog__type cake-mousse">
@@ -32,7 +31,6 @@ const CakesCatalog = () => {
         <div className="cakes-catalog__type cake-child">
             <p className="cakes-catalog__kind-of-cakes">Детские</p>
             <p className="cakes-catalog__how-many">18 вида</p>
-            <a href="#">Смотреть</a>
         </div>
     </section>
     )

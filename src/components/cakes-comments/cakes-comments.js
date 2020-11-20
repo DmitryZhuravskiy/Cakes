@@ -5,9 +5,9 @@ const CakesComments = () => {
         <section className="cakes-comments container">
             <h3 id="comments">Отзывы</h3>
             <div className="comments">
-                <picture class="comments__picture-of-autor">
-                    <source media="(min-width: 1200px)" srcset="./img/comments__picture-of-autor--desktop.jpg" />
-                    <source media="(min-width: 768px)" srcset="./img/comments__picture-of-autor--tablet.jpg" />
+                <picture className="comments__picture-of-autor">
+                    <source media="(min-width: 1200px)" srcSet="./img/comments__picture-of-autor--desktop.jpg" />
+                    <source media="(min-width: 768px)" srcSet="./img/comments__picture-of-autor--tablet.jpg" />
                     <img src="./img/comments__picture-of-autor--mobile.jpg" width="59" height="59" alt="Фото рецензента" />
                 </picture>
                 <div className="comments__about">

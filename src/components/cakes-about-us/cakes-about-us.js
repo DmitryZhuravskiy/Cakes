@@ -3,19 +3,19 @@ import React from 'react';
 const CakesAboutUs = () => {
     return (
         <section className="cakes-about-us container">
-            <h3 className="cakes-about-us__title">О нас</h3>
+            <h3 className="cakes-about-us__title" id="about-us">О нас</h3>
             <article className="cakes-about-us__photo">
                 <picture className="comments__picture-of-autor">
-                    <source media="(min-width: 1200px)" srcset="./img/cakes-about-us__photo--desktop.jpg" />
-                    <source media="(min-width: 768px)" srcset="./img/cakes-about-us__photo--tablet.jpg" />
+                    <source media="(min-width: 1200px)" srcSet="./img/cakes-about-us__photo--desktop.jpg" />
+                    <source media="(min-width: 768px)" srcSet="./img/cakes-about-us__photo--tablet.jpg" />
                     <img src="./img/cakes-about-us__photo--mobile.jpg" width="156" height="155" alt="Торт" />
                 </picture>
                 <ul className="cakes-about-us__links-bar links-bar__photo">
-                    <li className="btn-social"><a href="#">инстаграмм<img src="./img/links-bar__inst.png" alt="instagram" width="18"
+                    <li className="btn-social"><a href="https://www.instagram.com/">инстаграмм<img src="./img/links-bar__inst.png" alt="instagram" width="18"
                         height="18" /></a></li>
-                    <li className="btn-social"><a href="#">вконтакте<img src="./img/links-bar__vk.png" alt="vkontakte" width="25"
+                    <li className="btn-social"><a href="https://vk.com/">вконтакте<img src="./img/links-bar__vk.png" alt="vkontakte" width="25"
                         height="17" /></a></li>
-                    <li className="btn-social"><a href="#">твиттер<img src="./img/links-bar__tw.png" alt="twitter" width="19" height="16" /></a>
+                    <li className="btn-social"><a href="https://twitter.com/">твиттер<img src="./img/links-bar__tw.png" alt="twitter" width="19" height="16" /></a>
                     </li>
                 </ul>
             </article>
@@ -32,25 +32,25 @@ const CakesAboutUs = () => {
                 ингридиентов.</p>
                 <ul className="cakes-about-us__links-bar links-bar__information">
                     <li className="links-bar__link btn-social">
-                        <a className="links-bar__icon" href="#"><img src="./img/links-bar__inst.png" alt="instagram" width="18" height="18" /></a></li>
+                        <a className="links-bar__icon" href="https://www.instagram.com/"><img src="./img/links-bar__inst.png" alt="instagram" width="18" height="18" /></a></li>
                     <li className="links-bar__link btn-social">
-                        <a className="links-bar__icon" href="#"><img src="./img/links-bar__vk.png" alt="vkontakte" width="25" height="17" /></a></li>
+                        <a className="links-bar__icon" href="https://vk.com/"><img src="./img/links-bar__vk.png" alt="vkontakte" width="25" height="17" /></a></li>
                     <li className="links-bar__link btn-social">
-                        <a className="links-bar__icon" href="#"><img src="./img/links-bar__tw.png" alt="twitter" width="19" height="16" /></a></li>
+                        <a className="links-bar__icon" href="https://twitter.com/"><img src="./img/links-bar__tw.png" alt="twitter" width="19" height="16" /></a></li>
                 </ul>
             </article>
             <article className="cakes__quote">
                 <div className="quote__commas">
                     <picture>
-                        <source media="(min-width: 1200px)" srcset="./img/quote__commas--desktop.png" />
+                        <source media="(min-width: 1200px)" srcSet="./img/quote__commas--desktop.png" />
                         <img src="./img/quote__commas--tablet.png" width="35" height="22" alt="Кавычки" />
                     </picture>
                 </div>
                 <p className="quote__text">Я за простые рецепты. В Италии это называют cucina povera: когда обычные
                 ингридиенты превращаются в божественное блюдо.</p>
                 <picture className="quote__signature">
-                    <source media="(min-width: 1200px)" srcset="./img/quote__signature--desktop.png" />
-                    <source media="(min-width: 768px)" srcset="./img/quote__signature--tablet.png" />
+                    <source media="(min-width: 1200px)" srcSet="./img/quote__signature--desktop.png" />
+                    <source media="(min-width: 768px)" srcSet="./img/quote__signature--tablet.png" />
                     <img src="./img/quote__signature--mobile.png" width="64" height="31" alt="Подпись" />
                 </picture>
             </article>

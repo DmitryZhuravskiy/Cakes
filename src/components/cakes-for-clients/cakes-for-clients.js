@@ -11,8 +11,8 @@ const CakesForClient = () => {
             </article>
             <article className="cakes-for-clients__image">
                 <picture className="advantage-card__fresh">
-                    <source media="(min-width: 1200px)" srcset="./img/cakes-for-clients--desktop.png" />
-                    <source media="(min-width: 768px)" srcset="./img/cakes-for-clients--tablet.png" />
+                    <source media="(min-width: 1200px)" srcSet="./img/cakes-for-clients--desktop.png" />
+                    <source media="(min-width: 768px)" srcSet="./img/cakes-for-clients--tablet.png" />
                     <img src="./img/cakes-for-clients--mobile.png" width="320" height="325" alt="Торт за 24 часа" />
                 </picture>
             </article>

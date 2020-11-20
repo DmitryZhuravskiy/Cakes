@@ -1,10 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 class SpecialFilling extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     let ID = Number(this.props.idNumberFilling);
     return (
@@ -25,11 +21,11 @@ class SpecialFilling extends React.Component {
           <picture>
             <source
               media="(min-width: 1200px)"
-              srcset={this.props.filling[ID].imgDesktop}
+              srcSet={this.props.filling[ID].imgDesktop}
             />
             <source
               media="(min-width: 768px)"
-              srcset={this.props.filling[ID].imgTablet}
+              srcSet={this.props.filling[ID].imgTablet}
             />
             <img
               src={this.props.filling[ID].imgMobile}
@@ -45,39 +41,39 @@ class SpecialFilling extends React.Component {
             name="filling"
             type="radio"
             id="fil_1"
-            checked
             value="0"
-            onClick={this.props.handleClickFilling}
+            onChange={this.props.handleClickFilling}
+            defaultChecked
           />
           <input
             name="filling"
             type="radio"
             id="fil_2"
             value="1"
-            onClick={this.props.handleClickFilling}
+            onChange={this.props.handleClickFilling}
           />
           <input
             name="filling"
             type="radio"
             id="fil_3"
             value="2"
-            onClick={this.props.handleClickFilling}
+            onChange={this.props.handleClickFilling}
           />
           <input
             name="filling"
             type="radio"
             id="fil_4"
             value="3"
-            onClick={this.props.handleClickFilling}
+            onChange={this.props.handleClickFilling}
           />
           <input
             name="filling"
             type="radio"
             id="fil_5"
             value="4"
-            onClick={this.props.handleClickFilling}
+            onChange={this.props.handleClickFilling}
           />
-          <div class="slider-controls">
+          <div className="slider-controls">
             <label htmlFor="fil_1" value="0"></label>
             <label htmlFor="fil_2" value="1"></label>
             <label htmlFor="fil_3" value="2"></label>
