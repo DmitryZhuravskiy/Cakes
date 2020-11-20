@@ -1361,6 +1361,7 @@ textarea:focus {
   border-radius: 50%;
   background-color: #dddddd;
   margin: 5px;
+  cursor: pointer;
 }
 .cakes-special__size .size__radiobuttons #size_1:checked ~ .slider-controls label[for="size_1"],
 .cakes-special__size .size__radiobuttons #size_2:checked ~ .slider-controls label[for="size_2"],
@@ -1399,7 +1400,7 @@ textarea:focus {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 100px;
-    height: 90px;
+    height: 110px;
     position: absolute;
     top: 60px;
     left: 20px;
@@ -1454,13 +1455,17 @@ textarea:focus {
     max-width: 2500px;
   }
   .cakes-special__size .size__number {
+    display: flex;
+    height: 130px;
+    width: 250px;
     padding: 0 80px 40px 40px;
+    box-sizing: border-box;
   }
   .cakes-special__size .size__number .number-of-size {
     font-size: 60px;
     vertical-align: middle;
-    padding: 0 0 20px 0;
-    width: 90%;
+    padding: 0;
+    height: 65px;
   }
   .cakes-special__size .size__number .choise-of-size {
     font-size: 27px;
@@ -1474,12 +1479,19 @@ textarea:focus {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
   background-color: #fff;
   padding: 20px;
   max-width: 400px;
   margin: 0 auto;
   margin-top: 20px;
 }
+
+.cakes-special__design .card__berry-assorted--mobile-see,
+.cakes-special__design .card__marshmallow--mobile-see {
+  display: none;
+}
+
 .cakes-special__design .design__number {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1553,11 +1565,95 @@ textarea:focus {
 .cakes-special__design .card-number {
   display: none;
 }
+
+.cakes-special__design .card__berry-assorted--mobile-see,
+.cakes-special__design .card__marshmallow--mobile-see {
+  display: none;
+}
+
 @media (max-width: 767px) {
   .cakes-special__design .design__emblem,
-  .cakes-special__design .card__berry-assorted {
+  .cakes-special__design .card__berry-assorted,
+  .cakes-special__design .card__marshmallow {
     display: none;
   }
+
+  .cakes-special__design .card__berry-assorted--mobile-see,
+  .cakes-special__design .card__marshmallow--mobile-see {
+    display: flex;
+    min-height: 400px;
+  }
+
+.cakes-special__design #last_design {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  top: 200px;
+  left: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cakes-special__design #last_design:hover {
+  background-color: #e5d3d3;
+}
+.cakes-special__design .balka_1 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #f77b91;
+  top: 22px;
+  left: 12px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+}
+.cakes-special__design .balka_2 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #f77b91;
+  top: 13px;
+  left: 12px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  z-index: 2;
+}
+.cakes-special__design #next_design {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  top: 200px;
+  right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.cakes-special__design #next_design:hover {
+  background-color: #e5d3d3;
+}
+.cakes-special__design .balka_3 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #f77b91;
+  top: 22px;
+  left: 15px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  z-index: 2;
+}
+.cakes-special__design .balka_4 {
+  position: absolute;
+  width: 15px;
+  height: 3px;
+  background-color: #f77b91;
+  top: 13px;
+  left: 15px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  z-index: 2;
+}
 }
 @media (min-width: 768px) {
   .cakes-special__design {

@@ -5,7 +5,7 @@ const Header = () => {
     const toggleFIeldset = () => setIsShown(!isShown);
 
     return (
-        <header className="page-header container">
+        <header className="page-header container" id="header">
             <div className="page-header__title-burger">
                 <p className="page-header__title">Cakes</p>
                 <div className="main-nav__toggle" onClick={toggleFIeldset}>

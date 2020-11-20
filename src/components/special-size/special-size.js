@@ -1,5 +1,4 @@
 import React from "react";
-
 class SpecialSize extends React.Component {
     render() {
         return (
@@ -28,17 +27,17 @@ class SpecialSize extends React.Component {
                     <p className="characteristics__radius-of-cake">Три яруса 30, 25 и 18 см</p>
                     <p className="characteristics__number-of-person">(25-30 персон)</p>
                 </article>
-                <button className="btn size-btn">Выбрать</button>
+                <button className="btn size-btn" onClick={this.props.handleWeightChange}>Выбрать</button>
                 <article className="size__radiobuttons">
                     <input name="size" type="radio" id="size_1" defaultChecked />
                     <input name="size" type="radio" id="size_2" />
                     <input name="size" type="radio" id="size_3" />
                     <input name="size" type="radio" id="size_4" />
                     <div className="slider-controls">
-                        <label htmlFor="size_1"></label>
-                        <label htmlFor="size_2"></label>
-                        <label htmlFor="size_3"></label>
-                        <label htmlFor="size_4"></label>
+                        <label htmlFor="size_1" onClick={this.props.handleWeightChange1}></label>
+                        <label htmlFor="size_2" onClick={this.props.handleWeightChange2}></label>
+                        <label htmlFor="size_3" onClick={this.props.handleWeightChange5}></label>
+                        <label htmlFor="size_4" onClick={this.props.handleWeightChange8}></label>
                     </div>
                 </article>
             </section>
