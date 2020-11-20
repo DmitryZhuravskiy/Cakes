@@ -235,6 +235,10 @@ textarea:focus {
   top: 12px;
 }
 .page-header .navigation {
+  display: none;
+}
+
+.page-header .navigation--mobile {
   display: block;
   position: absolute;
   top: 56px;
@@ -309,6 +313,7 @@ textarea:focus {
             flex-grow: 25;
     margin-bottom: 10px;
   }
+
   .page-header .phone-number {
     display: block;
     -webkit-box-flex: 0;
@@ -340,6 +345,11 @@ textarea:focus {
     top: 0;
     left: 0;
   }
+
+  .page-header .navigation--mobile {
+    display: none;
+  }
+
   .page-header .navigation ul {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
