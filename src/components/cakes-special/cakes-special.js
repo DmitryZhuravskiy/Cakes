@@ -69,6 +69,8 @@ class CakesSpecial extends React.Component {
       ],
     }
     this.handleClickFilling = this.handleClickFilling.bind(this);
+    this.handleClickFillingForward = this.handleClickFillingForward.bind(this);
+    this.handleClickFillingBack = this.handleClickFillingBack.bind(this);
     this.handleWeightChange = this.handleWeightChange.bind(this);
     this.handleWeightChange1 = this.handleWeightChange1.bind(this);
     this.handleWeightChange2 = this.handleWeightChange2.bind(this);
@@ -82,6 +84,18 @@ class CakesSpecial extends React.Component {
   handleClickFilling(e) {
     this.setState({
       idNumberFilling: e.target.value,
+    });
+  }
+
+  handleClickFillingForward(e) {
+    this.setState({
+      idNumberFilling: this.state.idNumberFilling === 4 ? 0 : Number(this.state.idNumberFilling + 1),
+    });
+  }
+
+  handleClickFillingBack(e) {
+    this.setState({
+      idNumberFilling: this.state.idNumberFilling === 0 ? 4 : Number(this.state.idNumberFilling - 1),
     });
   }
 
@@ -145,7 +159,7 @@ class CakesSpecial extends React.Component {
       <form className="cakes-special container">
         <h3 id="individual-order">Индивидуальный заказ</h3>
         <span>Соберите торт в 3 шага</span>
-        <SpecialFilling filling={this.state.filling} idNumberFilling={this.state.idNumberFilling} handleClickFilling={this.handleClickFilling} />
+        <SpecialFilling filling={this.state.filling} idNumberFilling={this.state.idNumberFilling} handleClickFilling={this.handleClickFilling} handleClickFillingForward={this.handleClickFillingForward} handleClickFillingBack={this.handleClickFillingBack} />
         <SpecialSize filling={this.state.filling} handleWeightChange={this.handleWeightChange} handleWeightChange1={this.handleWeightChange1} handleWeightChange2={this.handleWeightChange2} handleWeightChange5={this.handleWeightChange5} handleWeightChange8={this.handleWeightChange8} />
         <SpecialDesign design={this.state.design} handleDesignChoiseBerry={this.handleDesignChoiseBerry} handleDesignChoiseMarshmallow={this.handleDesignChoiseMarshmallow} handleDesignChoise={this.handleDesignChoise} />
         <SpecialChoise idNumberFilling={this.state.idNumberFilling} weightSize={this.state.weightSize} design={this.state.design} filling={this.state.filling} />
