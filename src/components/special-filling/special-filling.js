@@ -2,7 +2,6 @@ import React from "react";
 
 class SpecialFilling extends React.Component {
   render() {
-    let ID = Number(this.props.idNumberFilling);
     return (
       <section className="cakes-special__filling">
         <div id="last_fil" onClick={this.props.handleClickFillingBack}>

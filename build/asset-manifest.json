@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.16884738.chunk.css",
+    "main.js": "/static/js/main.250f4c17.chunk.js",
+    "main.js.map": "/static/js/main.250f4c17.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.6457a543.js",
+    "runtime-main.js.map": "/static/js/runtime-main.6457a543.js.map",
+    "static/js/2.7852d79e.chunk.js": "/static/js/2.7852d79e.chunk.js",
+    "static/js/2.7852d79e.chunk.js.map": "/static/js/2.7852d79e.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e21c3d206287c72de2cb81caad4171da.js": "/precache-manifest.e21c3d206287c72de2cb81caad4171da.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.16884738.chunk.css.map": "/static/css/main.16884738.chunk.css.map",
+    "static/js/2.7852d79e.chunk.js.LICENSE.txt": "/static/js/2.7852d79e.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/static/media/cake-woman--tablet.0fdb0436.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6457a543.js",
+    "static/js/2.7852d79e.chunk.js",
+    "static/css/main.16884738.chunk.css",
+    "static/js/main.250f4c17.chunk.js"
+  ]
+}
